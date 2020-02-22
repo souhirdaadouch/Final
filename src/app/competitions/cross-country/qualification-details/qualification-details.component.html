@@ -1,0 +1,25 @@
+<table *ngIf="qualif">
+    <tbody *ngFor="let q of qualif">
+    <tr>
+        <td>
+            Qualification
+        </td>
+        <td>
+            {{q.qualifications}}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Règlements
+
+            Et
+
+            récompenses
+
+        </td>
+        <td>
+            {{q.reglementEtRecompenses}}
+        </td>
+    </tr>
+    </tbody>
+</table>

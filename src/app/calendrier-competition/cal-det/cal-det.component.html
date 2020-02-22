@@ -1,0 +1,25 @@
+<table class="table table-sm ">
+  <thead class="thead-inverse">
+  <tr>
+    <th> Nom Du Championnat</th>
+    <th class="text-center"> Date</th>
+    <th class="text-center"> Lieu</th>
+    <th class="text-center"> Organisateur</th>
+    <th class="text-center"> Niveau</th>
+    <th class="text-center"> Catégorie</th>
+    <th class="text-center"> Type</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of calendrier  | paginate: { itemsPerPage: 10, currentPage: p }" >
+    <td scope="row"><a class="list-group-item-action" href="{{c.link}}">{{c.manifestation}}</a></td>
+    <td class="text-center">{{c.jour}}/{{c.moisN}}/{{c.annee}}</td>
+    <td class="text-center">{{c.lieu}}</td>
+    <td class="text-center">{{c.organisateur}}</td>
+    <td class="text-center">{{c.niveau}}</td>
+    <td class="text-center">{{c.categorie}}</td>
+    <td class="text-center">{{c.type}}</td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)=" p = $event" class="text-center"></pagination-controls>

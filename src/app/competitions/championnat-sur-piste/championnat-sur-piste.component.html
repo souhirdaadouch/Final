@@ -1,0 +1,81 @@
+<!-- layout-->
+<div id="layout">
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>CHAMPIONNATS NATIONAUX SUR PISTE 03/04/05 Juillet 2020 à Rades</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+    <br>
+    <br>
+</div>
+<div class="container" style="font-size: large">
+    <h3 class="text-center">Programme Technique</h3>
+    <br>
+
+    <app-table-row [rows]="program" [rowsIndex]="programCols" [columns]="programCols"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <app-reglement-sur-piste></app-reglement-sur-piste>
+    <br>
+    <br>
+    <br>
+    <strong><h3 class="text-center">CHAMPIONNATS NATIONAUX SUR PISTE 03 juillet 2020 à Rades</h3><br><br></strong>
+    <h4 class="text-left">Programme Du Matin</h4><h4 class="text-right"> Rassemblement Des Officiels A 07:30</h4>
+    <br>
+    <app-table-row [rows]="progJ1Matin" [rowsIndex]="progCol" [columns]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h4 class="text-left">Programme Du Soir</h4><h4 class="text-right"> Rassemblement Des Officiels A 15.30</h4>
+    <br>
+    <app-table-row [rows]="progJ1Soir" [columns]="progCol" [rowsIndex]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <strong><h3 class="text-center">CHAMPIONNATS NATIONAUX SUR PISTE 04 juillet 2020 à Rades</h3><br><br></strong>
+    <h4 class="text-left">Programme Du Matin</h4><h4 class="text-right"> Rassemblement Des Officiels A 07:30</h4>
+    <br>
+    <app-table-row [rows]="progJ2Matin" [rowsIndex]="progCol" [columns]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h4 class="text-left">Programme Du Soir</h4><h4 class="text-right"> Rassemblement Des Officiels A 15.30</h4>
+    <br>
+    <app-table-row [rows]="progJ2Soir" [columns]="progCol" [rowsIndex]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <strong><h3 class="text-center">CHAMPIONNATS NATIONAUX SUR PISTE 05 juillet 2020 à Rades</h3><br><br></strong>
+    <h4 class="text-left">Programme Du Matin</h4><h4 class="text-right"> Rassemblement Des Officiels A 07:30</h4>
+    <br>
+    <app-table-row [rows]="progJ3Matin" [rowsIndex]="progCol" [columns]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h4 class="text-left">Programme Du Soir</h4><h4 class="text-right"> Rassemblement Des Officiels A 15.30</h4>
+    <br>
+    <app-table-row [rows]="progJ3Soir" [columns]="progCol" [rowsIndex]="progCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>

@@ -1,0 +1,60 @@
+<div id="layout">
+
+  <!-- Section Title -->
+  <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Liste des Compétitions</h1>
+        </div>
+
+        <div class="col-md-4">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>Inner Page</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Section Title -->
+</div>
+
+<div class="container center">
+  <br><br><br>
+  <div>
+    <h2 class="text-center"> Liste des Championnats</h2>
+  </div>
+  <br><br><br>
+  <table class="tab-content">
+    <thead>
+    <tr>
+      <th> Nom Du Championnat</th>
+      <th class="text-center"> Date</th>
+      <th class="text-center"> Lieu</th>
+      <th class="text-center"> Organisateur</th>
+      <th class="text-center"> Niveau</th>
+      <th class="text-center"> Catégorie</th>
+      <th class="text-center"> Type</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of calendrierChampionnat">
+      <td><a class="btn-light" routerLink="/{{c.link}}">{{c.manifestation}}</a></td>
+      <td class="text-center">{{c.jour}}/{{c.moisN}}/{{c.annee}}</td>
+      <td class="text-center">{{c.lieu}}</td>
+      <td class="text-center">{{c.organisateur}}</td>
+      <td class="text-center">{{c.niveau}}</td>
+      <td class="text-center">{{c.categorie}}</td>
+      <td class="text-center">{{c.type}}</td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+

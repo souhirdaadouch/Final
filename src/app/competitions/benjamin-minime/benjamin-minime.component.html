@@ -1,0 +1,50 @@
+<!-- layout-->
+<div id="layout">
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Benjamins et Minimes</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+</div>
+<br>
+<div class="container" style="font-size: large">
+    <h3 class="text-center"> Programme Technique</h3><br>
+    <h3 class="text-center"> Benjamins A et B</h3>
+    <br>
+    <app-table-row [rows]="benjamins" [columns]="progCols" [rowsIndex]="progCols"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center"> Caractéristiques des Courses de Haies</h3>
+    <app-caract-haies></app-caract-haies>
+
+
+    <br>
+    <br>
+    <br>
+    <app-part-piste-benjamin></app-part-piste-benjamin>
+    <br>
+    <h3 class="text-center"> Benjamins A et B</h3>
+    <br>
+    <app-table-row [rows]="minimes" [columns]="progCols" [rowsIndex]="progCols"></app-table-row>
+    <br>
+    <br>
+    <br>
+
+</div>

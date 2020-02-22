@@ -1,0 +1,42 @@
+<section class="container">
+  <div>
+    <a> Tableau récapitulatif de la formation 2019/2020 </a>
+    <table>
+      <thead>
+      <th scope="col">Ordre</th>
+      <th scope="col">Activité</th>
+      <th scope="col">Nature de l'activité</th>
+      <th scope="col">Période</th>
+      <th scope="col">Lieu</th>
+      <th scope="col">Nombre de participants</th>
+      <th scope="col">Organisme</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let s of Formation2020">
+        <td>
+          {{s.Ordre}}
+        </td>
+        <td>
+          {{s.Activite}}
+        </td>
+        <td>
+          {{s.Nature_Activite}}
+        </td>
+        <td>
+          {{s.Periode}}
+        </td>
+        <td>
+          {{s.Lieu}}
+        </td>
+        <td>
+          {{s.Nb_participants}}
+        </td>
+        <td>
+          {{s.Organisme}}
+        </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

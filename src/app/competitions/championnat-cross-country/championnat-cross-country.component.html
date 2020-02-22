@@ -1,0 +1,57 @@
+<!-- layout-->
+<div id="layout">
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>CHAMPIONNAT DE TUNISIE DE CROSS COUNTRY</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+</div>
+    <br>
+    <h2 class="text-center" style="color: red;">CHAMPIONNAT DE TUNISIE DE CROSS COUNTRY</h2>
+    <div class="container" style="font-size: large">
+
+        <strong><h3 class="text-left"> Date :  {{cross.jourSemaine}}  {{cross.jour}}/{{cross.moisN}}/{{cross.annee}}</h3><br>
+            <h3 class="text-left"> Lieu :  {{cross.lieu}}</h3></strong><br>
+        <h3 class="text-center"> Qualification et Récompenses</h3><br>
+        <br>
+        <app-qualification-details></app-qualification-details>
+        <br>
+        <br>
+        <br>
+        <h3 class="text-center">Le programme Technique</h3>
+        <app-table-row [rows]="programme" [rowsIndex]="columns" [columns]="columns"></app-table-row>
+        <br>
+        <br>
+        <br>
+        <h3 class="text-center">Le programme horaire</h3>
+        <app-table-row [columns]="horaireCols" [rowsIndex]="horaireCols" [rows]="horaire"></app-table-row>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+    </div>
+    <br>
+    <br>
+    <br>
+

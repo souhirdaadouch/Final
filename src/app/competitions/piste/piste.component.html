@@ -1,0 +1,54 @@
+<!-- layout-->
+<div id="layout">
+
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Sur Piste</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+    <br>
+    <br>
+</div>
+    <div class="container" style="font-size: large">
+        <br>
+        <br>
+        <h3 class="text-center">CALENDRIER SUR PISTE</h3>
+        <br>
+
+<app-table-row [columns]="calendrierCols" [rowsIndex]="calendrierCols" [rows]="calendrier"></app-table-row>
+
+        <br>
+        <br>
+        <h3 class="text-center">Programme Technique Estivale</h3>
+        <br>
+
+        <app-table-row [rows]="program" [rowsIndex]="programCols" [columns]="programCols"></app-table-row>
+
+        <br>
+        <br>
+        <br>
+        <h3> Qualification :</h3>
+        <h5 *ngFor="let q of qualif">{{q.q}}</h5>
+
+
+
+    </div>
+    <br>
+    <br><br>
+    <br>

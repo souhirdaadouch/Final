@@ -1,0 +1,44 @@
+<!-- layout-->
+<div id="layout">
+
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Catégories</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+</div>
+<br>
+<div class="container" style="font-size: large">
+
+    <h3 class="text-center">Catégories <br>(applicables {{season[0].season}} )</h3>
+    <br>
+    <br>
+    <br>
+    <app-table-row [rows]="cat" [rowsIndex]="catCol" [columns]="catCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+
+
+
+

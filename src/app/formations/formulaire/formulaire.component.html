@@ -1,0 +1,101 @@
+<section class="container">
+  <div _ngcontent-ogr-c3="" class="panel-box">
+    <div _ngcontent-ogr-c3="" class="titles no-margin">
+      <h4 _ngcontent-ogr-c3="">Fomulaire d'inscription à une formation</h4>
+    </div>
+    <div _ngcontent-ogr-c3="" class="info-panel">
+      <form _ngcontent-ogr-c3="" action="http://html.iwthemes.com/sportscup/run/php/send-mail.php"
+            class="form-theme ng-untouched ng-pristine ng-valid" novalidate="">
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-ogr-c3="" class="col-md-6">
+            <label _ngcontent-ogr-c3="">Nom et prénom *</label>
+            <input
+              type="text"
+              formControlName="name"
+              class="form-control"
+              placeholder="Entrer votre nom et prénom" required="">
+          </div>
+          <div _ngcontent-ogr-c3="" class="col-md-6">
+            <label _ngcontent-ogr-c3="">Date de naissance et lieu *</label>
+            <input
+              type="date"
+              formControlName="date_naiss"
+              class="form-control" required="">
+          </div>
+        </div>
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-ogr-c3="" class="col-md-6">
+            <label _ngcontent-ogr-c3="">Genre *</label>
+            <select type="text" formControlName="sex" class="form-control" required="">
+              <option value="">Selectionner votre sex</option>
+              <option value="Male">Homme</option>
+              <option value="Female">Femme</option>
+            </select>
+          </div>
+          <div _ngcontent-ogr-c3="" class="col-md-6">
+            <label _ngcontent-ogr-c3="">CIN *</label>
+            <input type="text"
+                   formControlName="Cin"
+                   class="form-control" placeholder="Entrer N° CIN" required="">
+          </div>
+        </div>
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-ogr-c3="" class="col-md-12">
+            <label _ngcontent-ogr-c3="">Expérience ATHLETE *</label>
+            <div class="form-group">
+              <label class="control-label col-sm-2">Nom du club</label>
+              <div class="col-sm-10">
+                <input type="text"
+                       formControlName="nom_club"
+                       class="form-control" placeholder="Entrer Nom du club">
+              </div>
+            </div>
+            <label class="control-label col-sm-2">Equipe Nationnale </label>
+            <div class="col-sm-10">
+              <input type="text"
+                     formControlName="nom_equipe"
+                     class="form-control" placeholder="Entrer Non de l'équipe">
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-ogr-c3="" class="col-md-12">
+            <label _ngcontent-ogr-c3="">Expérience entraineur </label>
+            <div class="form-group">
+              <input type="text"
+                     formControlName="Exp_entraineur"
+                     class="form-control" placeholder="Entrer Non de l'équipe">
+            </div>
+          </div>
+        </div>
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-lnf-c4="" class="col-md-6"><label _ngcontent-lnf-c4="">E-mail</label>
+            <input _ngcontent-lnf-c4="" class="form-control" id="email" maxlength="100" name="Email" required="required"
+                   type="email" value="" placeholder="Entrer vote E-mail">
+          </div>
+          <div _ngcontent-ogr-c3="" class="col-md-6">
+            <label _ngcontent-ogr-c3="">Numéro de téléphone</label>
+            <input type="number" formControlName="phone" class="form-control" placeholder="N° Tel" required="">
+          </div>
+        </div>
+        <div _ngcontent-ogr-c3="" class="row">
+          <div _ngcontent-ogr-c3="" class="col-md-12">
+            <input _ngcontent-ogr-c3="" class="btn btn-lg btn-primary" type="submit" value="Send Message">
+          </div>
+        </div>
+      </form>
+      <div _ngcontent-ogr-c3="" class="row">
+        <div _ngcontent-ogr-c3="" class="col-md-12">
+          <div _ngcontent-ogr-c3="" class="result">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+

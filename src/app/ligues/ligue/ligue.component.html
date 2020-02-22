@@ -1,0 +1,10 @@
+<div class="item-team">
+  <div class="head-team">
+    <img [src]="'assets/img/ligues/' + ligue.image" [alt]="ligue.image">
+  </div>
+  <div class="info-team">
+    <h4>{{ligue.name}}</h4>
+  </div>
+  <br>
+  <a [routerLink]="'/single-ligue/'+ ligue.id" class="btn">Team Profile <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+</div>

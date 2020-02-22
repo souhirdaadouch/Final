@@ -1,0 +1,7 @@
+<p style="font-size: large; color: black">
+    <ng-container *ngFor="let p of participation">
+        <div *ngIf="p.p">{{p.p}}</div>
+        <div *ngIf="p.adresse"><strong>{{p.adresse}}</strong></div>
+        <br>
+    </ng-container>
+</p>
