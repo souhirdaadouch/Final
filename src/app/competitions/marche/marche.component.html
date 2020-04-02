@@ -1,0 +1,51 @@
+<!-- layout-->
+<div id="layout">
+
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Marche</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+    <br>
+    <br>
+</div>
+
+    <div class="container" style="font-size: large">
+
+        <h3 class="text-center"> CALENDRIER DE LA MARCHE</h3>
+
+
+        <app-table-row [rows]="calendrier" [rowsIndex]="calendrierCols" [columns]="calendrierCols"></app-table-row>
+
+<br>
+<br>
+<br>
+        <div *ngFor="let c of distanceRow; let n = index">
+            <h3 class="text-center"> {{mois[n].mois}} </h3>
+            <app-table-row [columns]="distanceCol" [rowsIndex]="distanceCol" [rows]="c"></app-table-row>
+        </div>
+
+
+        <br>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br><br>
+    <br>

@@ -1,0 +1,27 @@
+<div class="col-lg-12 match">
+  <h3 class="clear-title">{{p.Type}}</h3>
+</div>
+<table class="table-striped table-responsive table-hover career">
+  <thead>
+  <tr>
+    <th>Année</th>
+    <th>Performance</th>
+    <th>Place</th>
+    <th>Date</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let perfo of p.Performance" >
+    <td>
+      {{perfo.Annee}}
+    </td>
+    <td>
+      {{perfo.PERFORMANCE}}
+    </td>
+    <td>{{perfo.PLACE}}</td>
+    <td>
+      {{perfo.DATE}}
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,49 @@
+<!-- layout-->
+<div id="layout">
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>CHAMPIONNAT DE TUNISIE DE CROSS COUNTRY</h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+</div>
+<br>
+<h2 class="text-center" style="color: red;">CHAMPIONNAT DE TUNISIE DE LA MARCHE SUR ROUTE</h2>
+<div class="container" style="font-size: large">
+
+    <strong><h3 class="text-left"> Date :  {{marche.jourSemaine}}  {{marche.jour}}/{{marche.moisN}}/{{marche.annee}}</h3><br>
+        <h3 class="text-left"> Lieu :  {{marche.lieu}}</h3><br>
+    <h3 class="text-left"> Organidateurs : {{marche.organisateur}}</h3><br>
+    <h3 class="text-left"> Niveau : {{marche.niveau}}</h3>
+    </strong><br>
+
+    <app-participation></app-participation>
+    <br>
+    <h3 class="text-center"><strong>Programme Technique</strong></h3>
+    <br>
+    <app-table-row [rows]="progTech" [rowsIndex]="techCol" [columns]="techCol" ></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center"><strong>Programme Horaire</strong></h3>
+    <br>
+    <app-table-row [columns]="horaireCol" [rowsIndex]="horaireCol" [rows]="progHoraire"></app-table-row>
+</div>
+<br>
+<br>
+<br>

@@ -1,0 +1,165 @@
+<!-- layout-->
+<div id="layout">
+  <!-- Section Title -->
+  <div class="section-title single-player" style="background:url(assets/img/slide/3.jpg)">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Single Player</h1>
+        </div>
+
+        <div class="col-md-4">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li>Inner Page</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Section Title -->
+
+  <!-- Section Area - Content Central -->
+  <section class="content-info">
+
+    <!-- Single Team Tabs -->
+    <div class="single-player-tabs">
+      <div class="container">
+        <div class="row">
+          <!-- Side info single team-->
+          <div class="col-lg-4 col-xl-3">
+
+            <div class="item-player single-player">
+              <div class="head-player">
+                <img src="assets/img/players/7.jpg" alt="location-team"/>
+              </div>
+              <div class="info-player">
+                                        <span class="number-player">
+                                            10
+                                        </span>
+                <h4>
+                  {{p.prenom}} {{p.nom}}
+                  <span>Forward</span>
+                </h4>
+                <ul>
+                  <li>
+                    <strong>CLUB:</strong> <span> {{p.club}} </span>
+                  </li>
+                  <li><strong>CLUB ETRANGER:</strong> <span>{{p.clubetranger}}</span></li>
+                  <li><strong>DATE DE NAISSANCE:</strong> <span>{{p.ddn}}</span></li>
+                </ul>
+
+
+                <ul class="social-player">
+                  <li>
+                    <div>
+                      <a href="#" class="facebook">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#" class="twitter-icon">
+                        <i class="fa fa-twitter"></i>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <a href="#" class="youtube">
+                        <i class="fa fa-youtube"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Attack -->
+            <div class="panel-box">
+              <div class="titles no-margin">
+                <h4><i class="fa fa-user"></i>Personal Info</h4>
+              </div>
+              <ul class="list-panel">
+                <li><p>Sexe <span>{{p.sexe}}</span></p></li>
+                <li><p>Nationalité <span>Tunisienne</span></p></li>
+                <li><p>Lieu De Naissance <span>{{p.lieu}}</span></p></li>
+                <li><p>Date De Naissance <span>{{p.ddn}}</span></p></li>
+              </ul>
+            </div>
+            <!-- End Attack -->
+          </div>
+          <!-- end Side info single team-->
+
+          <div class="col-lg-8 col-xl-9">
+            <!-- Nav Tabs -->
+            <ul class="nav nav-tabs" id="myTab">
+              <li class="active"><a href="#overview" data-toggle="tab">Overview</a></li>
+              <li><a href="#palmares" data-toggle="tab">Palmares</a></li>
+              <li><a href="#perfo" data-toggle="tab">Meilleures Performances</a></li>
+            </ul>
+            <!-- End Nav Tabs -->
+
+            <!-- Content Tabs -->
+            <div class="tab-content">
+              <!-- Tab One - overview -->
+              <div class="tab-pane active" id="overview">
+
+                <div class="panel-box padding-b">
+                  <div class="titles">
+                    <h4>Jamez overview</h4>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-12 col-xl-4">
+                      <img src="assets/img/clubs-teams/single-team.jpg" alt=""/>
+                    </div>
+
+                    <div class="col-lg-12 col-xl-8">
+                      <p>The Colombia national football team (Spanish: Selección de fútbol de Colombia) represents Colombia in international football competitions and is overseen by the Colombian Football Federation. It is a member of the CONMEBOL and is currently ranked thirteenth in the FIFA World Rankings.[3] The team are nicknamed Los Cafeteros due to the coffee production in their country.</p>
+
+                      <p>Since the mid-1980s, the national team has been a symbol fighting the country's negative reputation. This has made the sport popular and made the national team a sign of nationalism, pride and passion for many Colombians worldwide.</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+              </div>
+              <!-- Tab One - overview -->
+
+              <!-- Tab Theree - Palmares -->
+              <div class="tab-pane " id="palmares" style="padding-bottom: 100px">
+                <div class="col-lg-12">
+                <app-playerpalmares *ngFor="let year of p.Palmares" [p]="year"></app-playerpalmares>
+                </div>
+              </div>
+
+              <!-- Tab Theree - Palmares -->
+
+              <!-- Tab Theree - meilleures performances -->
+              <div class="tab-pane" id="perfo" style="padding-bottom: 100px">
+
+                <div class="row">
+                  <div class="col-lg-12">
+                  <app-playerperfor *ngFor="let perfo of p.Performances" [p]="perfo"></app-playerperfor>
+                  </div>
+                </div>
+
+              </div>
+              <!-- End Tab Theree - meilleures performances -->
+            </div>
+            <!-- Content Tabs -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Single Team Tabs -->
+
+
+  </section>
+  <!-- End Section Area -  Content Central -->
+</div>
+<!-- End layout-->

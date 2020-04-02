@@ -1,0 +1,95 @@
+<!-- layout-->
+<div id="layout">
+
+    <!-- Section Title -->
+    <div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Championnats Nationaux
+                        Des Epreuves Combinées, 10000m (Junior et Senior F+G)
+                        Et Marche Sur Piste
+                    </h1>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li>Inner Page</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Section Title -->
+</div>
+<br>
+<div class="container" style="font-size: large">
+    <h3 class="text-left"> Date : {{event.jourSemaine}} {{event.jour}} {{event.mois}} {{event.annee}}</h3><br>
+    <h3 class="text-left"> Lieu : {{event.lieu}}</h3><br>
+    <app-part-ep-comb></app-part-ep-comb>
+    <br>
+    <br>
+    <br>
+    <h2 class="text-center">Programme Technique</h2>
+    <h3 class="text-left"> 1- Epreuves Combinées</h3>
+    <br>
+    <app-table-row [rows]="epcom" [columns]="epcomCol" [rowsIndex]="epcomCol"></app-table-row>
+    <br>
+    <br>
+    <h3 class="text-left">2 - Marche</h3>
+    <br>
+    <app-table-row [rowsIndex]="marhceCol" [columns]="marhceCol" [rows]="marhce"></app-table-row>
+    <br>
+    <br>
+    <h3 class="text-left"> 3- 10000m : Junior+Senior (F+G)</h3>
+    <br>
+    <br>
+    <h2 class="text-center">Programme Horaire</h2>
+    <br>
+    <h3 class="text-center"> Programme du 11/07/2020 </h3>
+    <h3 class="text-left"> Matin Rassemblement des officiels 07:15 </h3>
+    <br>
+    <app-table-row [rows]="hj1m" [columns]="horaireCol" [rowsIndex]="horaireCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-left"> Aprés Midi Rassemblement des officiels 14:15 </h3>
+    <br>
+    <app-table-row [rowsIndex]="horaireCol" [columns]="horaireCol" [rows]="hj1s"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center"> Programme du 12/07/2020 </h3>
+    <h3 class="text-left"> Matin Rassemblement des officiels 07:15 </h3>
+    <br>
+    <app-table-row [rows]="hj2m" [columns]="horaireCol" [rowsIndex]="horaireCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-left"> Aprés Midi Rassemblement des officiels 14:15 </h3>
+    <br>
+    <app-table-row [rowsIndex]="horaireCol" [columns]="horaireCol" [rows]="hj2s"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center">Caractéristiques des Crouses de Haies</h3>
+    <br>
+    <app-table-row [rows]="haies" [columns]="haiesCol" [rowsIndex]="haiesCol"></app-table-row>
+    <br>
+    <br>
+    <br>
+    <h3 class="text-center">Caractéristiques des Engins de Lancers</h3>
+    <br>
+    <app-table-row [rowsIndex]="enginsCol" [columns]="enginsCol" [rows]="engins"></app-table-row>
+    <br>
+    <br>
+    <app-notes-champ-ep-comb></app-notes-champ-ep-comb>
+</div>
+<br>
+<br>
+<br>
+<br>
