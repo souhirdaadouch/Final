@@ -12,19 +12,22 @@ export class FormDemandeLicenceDirigeantComponent implements OnInit {
 
   ngOnInit() {
     this.licenceDirigeantForm = new FormGroup({
-      'nom': new FormControl(null, Validators.required),
-      'prenom': new FormControl(null),
-      'dateNaissance': new FormControl(null, Validators.required),
-      'lieuNaissance': new FormControl(null, Validators.required),
-      'adresse': new FormControl(null, Validators.required),
-      'codePostal': new FormControl(null, Validators.required),
-      'profession': new FormControl(null, Validators.required),
-      'diplomes': new FormArray([new FormControl(null, Validators.required)]),
-      'cin': new FormControl(null, Validators.required),
-      'dateEmission': new FormControl(null, Validators.required),
-      'lieuEmission': new FormControl(null, Validators.required),
-      'numTel': new FormControl(null, Validators.required),
-      'email': new FormControl(null, Validators.required),
+      nom: new FormControl(null, Validators.required),
+      prenom: new FormControl(null),
+      dateNaissance: new FormControl(null, Validators.required),
+      lieuNaissance: new FormControl(null, Validators.required),
+      adresse: new FormControl(null, Validators.required),
+      codePostal: new FormControl(null, Validators.required),
+      profession: new FormControl(null, Validators.required),
+      diplomes: new FormArray([new FormControl(null, Validators.required)]),
+      cin: new FormControl(null, Validators.required),
+      dateEmission: new FormControl(null, Validators.required),
+      lieuEmission: new FormControl(null, Validators.required),
+      numTel: new FormControl(null, Validators.required),
+      email: new FormControl(null, Validators.required),
+      paiement : new FormControl(null, Validators.required),
+      photo : new FormControl(null, Validators.required),
+      cn : new FormControl(null, Validators.required)
     });
   }
   onAddDiplome() {

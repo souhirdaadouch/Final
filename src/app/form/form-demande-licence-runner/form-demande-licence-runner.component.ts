@@ -16,20 +16,24 @@ export class FormDemandeLicenceRunnerComponent implements OnInit {
 
   ngOnInit() {
     this.licenceRunnerForm = new FormGroup({
-      'club': new FormControl(null, Validators.required),
-      'ligue': new FormControl(null, Validators.required),
-      'nom': new FormControl(null, Validators.required),
-      'prenom': new FormControl(null, Validators.required),
-      'dateNaissance': new FormControl(null, Validators.required),
-      'lieu': new FormControl(null, Validators.required),
-      'poids': new FormControl(null, Validators.required),
-      'taille': new FormControl(null, Validators.required),
-      'sexe': new FormControl(null, Validators.required),
-      'nationalite': new FormControl(null, Validators.required),
-      'categorie': new FormControl(null, Validators.required),
-      'numAncienneLicence': new FormControl(null, Validators.required),
-      'adresse': new FormControl(null, Validators.required),
-      'numTel': new FormControl(null, Validators.required)
+      club: new FormControl(null, Validators.required),
+      ligue: new FormControl(null, Validators.required),
+      nom: new FormControl(null, Validators.required),
+      prenom: new FormControl(null, Validators.required),
+      dateNaissance: new FormControl(null, Validators.required),
+      lieu: new FormControl(null, Validators.required),
+      poids: new FormControl(null, Validators.required),
+      taille: new FormControl(null, Validators.required),
+      sexe: new FormControl(null, Validators.required),
+      nationalite: new FormControl(null, Validators.required),
+      categorie: new FormControl(null, Validators.required),
+      numAncienneLicence: new FormControl(null, Validators.required),
+      adresse: new FormControl(null, Validators.required),
+      numTel: new FormControl(null, Validators.required),
+      paiement : new FormControl(null, Validators.required),
+      photo : new FormControl(null, Validators.required),
+      cn : new FormControl(null, Validators.required),
+      certificat : new FormControl(null, Validators.required)
     });
   }
   onSubmit() {

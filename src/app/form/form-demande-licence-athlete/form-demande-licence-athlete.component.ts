@@ -11,6 +11,10 @@ export class FormDemandeLicenceAthleteComponent implements OnInit {
   licenceAthleteForm: FormGroup;
   montant = -1;
   ext = true;
+  cin: File;
+  photo: File;
+  certificat: File;
+  paiement: File;
   AffiliationForm: FormGroup;
   DemandeJuge: FormGroup;
   constructor() { }
@@ -59,7 +63,6 @@ export class FormDemandeLicenceAthleteComponent implements OnInit {
       paiement : new FormControl(null, Validators.required),
       photo : new FormControl(null, Validators.required)
     })
-
     this.licenceAthleteForm = new FormGroup({
       club: new FormControl(null, Validators.required),
       ligue: new FormControl(null, Validators.required),
@@ -75,6 +78,9 @@ export class FormDemandeLicenceAthleteComponent implements OnInit {
       numAncienneLicence: new FormControl(null, Validators.required),
       adresse: new FormControl(null, Validators.required),
       numTel: new FormControl(null, Validators.required),
+      certificat : new FormControl(null, Validators.required),
+      paiement : new FormControl(null, Validators.required),
+      photo : new FormControl(null, Validators.required)
     });
   }
 

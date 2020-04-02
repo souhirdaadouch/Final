@@ -11,6 +11,9 @@ export class FormDemandeLicenceAthletePromotionComponent implements OnInit {
   licenceAthleteFormPromotion: FormGroup;
   montant = -1;
   ext = true;
+  certificat: File;
+  paiement: File;
+  photo: File;
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +32,9 @@ export class FormDemandeLicenceAthletePromotionComponent implements OnInit {
       numAncienneLicence: new FormControl(null, Validators.required),
       adresse: new FormControl(null, Validators.required),
       numTel: new FormControl(null, Validators.required),
+      certificat : new FormControl(null, Validators.required),
+      paiement : new FormControl(null, Validators.required),
+      photo : new FormControl(null, Validators.required)
     });
   }
 
