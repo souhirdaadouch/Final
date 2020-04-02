@@ -76,6 +76,7 @@ import {FormDemandeLicenceMasterComponent} from './form/form-demande-licence-mas
 import {NosDocumentsComponent} from './nos-documents/nos-documents.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ChampionnatComponent} from './competitions/championnat/championnat.component';
+import {EngagementLicenseComponent} from "./engagement-license/engagement-license.component";
 
 function MCompMasterComponent() {
 }
@@ -165,6 +166,10 @@ const routes: Routes = [
   {
     path: 'licence-entraineur',
     component: FormDemandeLicenceEntraineurComponent,
+  },
+  {
+    path: 'engagement-licence',
+    component: EngagementLicenseComponent,
   },
   {
     path: 'bureau',
