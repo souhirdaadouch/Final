@@ -138,6 +138,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { ChampionnatComponent } from './competitions/championnat/championnat.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormDemandeJugeComponent } from './form/form-demande-juge/form-demande-juge.component';
+import { DemandeMutationComponent } from './form/demande-mutation/demande-mutation.component';
 
 @NgModule({
   declarations: [
@@ -258,7 +259,8 @@ import { FormDemandeJugeComponent } from './form/form-demande-juge/form-demande-
     NbComponent,
     WelcomeComponent,
     ChampionnatComponent,
-    FormDemandeJugeComponent
+    FormDemandeJugeComponent,
+    DemandeMutationComponent
   ],
   imports: [
     BrowserModule,

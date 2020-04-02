@@ -77,6 +77,8 @@ import {NosDocumentsComponent} from './nos-documents/nos-documents.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ChampionnatComponent} from './competitions/championnat/championnat.component';
 import {EngagementLicenseComponent} from "./engagement-license/engagement-license.component";
+import {FormDemandeJugeComponent} from "./form/form-demande-juge/form-demande-juge.component";
+import {DemandeMutationComponent} from "./form/demande-mutation/demande-mutation.component";
 
 function MCompMasterComponent() {
 }
@@ -166,6 +168,14 @@ const routes: Routes = [
   {
     path: 'licence-entraineur',
     component: FormDemandeLicenceEntraineurComponent,
+  },
+  {
+    path: 'demande-juge',
+    component: FormDemandeJugeComponent,
+  },
+  {
+    path: 'demande-mutation',
+    component: DemandeMutationComponent,
   },
   {
     path: 'engagement-licence',
