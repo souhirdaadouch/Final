@@ -124,8 +124,6 @@ import {FinalCCComponent} from './results/final-cc/final-cc.component';
 import {EventService} from './_service/Event';
 import {HashLocationStrategy, LocationStrategy} from '@angular/common';
 import {NosDocumentsComponent} from './nos-documents/nos-documents.component';
-import {DemandeMasterComponent} from './nos-documents/demande-master/demande-master.component';
-import {DemandeAffiliationComponent} from './nos-documents/demande-affiliation/demande-affiliation.component';
 import {FormDemandeLicenceAthleteComponent} from './form/form-demande-licence-athlete/form-demande-licence-athlete.component';
 import {FormDemandeLicenceAthletePromotionComponent} from './form/form-demande-licence-athlete-promotion/form-demande-licence-athlete-promotion.component';
 import {FormDemandeLicenceDirigeantComponent} from './form/form-demande-licence-dirigeant/form-demande-licence-dirigeant.component';
@@ -134,11 +132,11 @@ import {FormDemandeLicenceMasterComponent} from './form/form-demande-licence-mas
 import {FormDemandeLicenceRunnerComponent} from './form/form-demande-licence-runner/form-demande-licence-runner.component';
 import {HeadingComponent} from './form/heading/heading.component';
 import {NbComponent} from './form/nb/nb.component';
-import { WelcomeComponent } from './welcome/welcome.component';
 import { ChampionnatComponent } from './competitions/championnat/championnat.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { FormDemandeJugeComponent } from './form/form-demande-juge/form-demande-juge.component';
 import { DemandeMutationComponent } from './form/demande-mutation/demande-mutation.component';
+import {DemandeAffiliationComponent} from './form/demande-affiliation/demande-affiliation.component';
 
 @NgModule({
   declarations: [
@@ -247,7 +245,6 @@ import { DemandeMutationComponent } from './form/demande-mutation/demande-mutati
     ChampArCComponent,
     FinalCCComponent,
     NosDocumentsComponent,
-    DemandeMasterComponent,
     DemandeAffiliationComponent,
     FormDemandeLicenceAthleteComponent,
     FormDemandeLicenceAthletePromotionComponent,
@@ -257,10 +254,10 @@ import { DemandeMutationComponent } from './form/demande-mutation/demande-mutati
     FormDemandeLicenceRunnerComponent,
     HeadingComponent,
     NbComponent,
-    WelcomeComponent,
     ChampionnatComponent,
     FormDemandeJugeComponent,
-    DemandeMutationComponent
+    DemandeMutationComponent,
+    EngagementLicenseComponent
   ],
   imports: [
     BrowserModule,

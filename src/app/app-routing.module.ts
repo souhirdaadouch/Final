@@ -65,8 +65,6 @@ import {ChampMSRHComponent} from './results/champ-msrh/champ-msrh.component';
 import {ChampAfr2019Component} from './results/champ-afr2019/champ-afr2019.component';
 import {ChampArCComponent} from './results/champ-ar-c/champ-ar-c.component';
 import {FinalCCComponent} from './results/final-cc/final-cc.component';
-import {DemandeMasterComponent} from './nos-documents/demande-master/demande-master.component';
-import {DemandeAffiliationComponent} from './nos-documents/demande-affiliation/demande-affiliation.component';
 import {FormDemandeLicenceEntraineurComponent} from './form/form-demande-licence-entraineur/form-demande-licence-entraineur.component';
 import {FormDemandeLicenceDirigeantComponent} from './form/form-demande-licence-dirigeant/form-demande-licence-dirigeant.component';
 import {FormDemandeLicenceAthletePromotionComponent} from './form/form-demande-licence-athlete-promotion/form-demande-licence-athlete-promotion.component';
@@ -74,11 +72,11 @@ import {FormDemandeLicenceAthleteComponent} from './form/form-demande-licence-at
 import {FormDemandeLicenceRunnerComponent} from './form/form-demande-licence-runner/form-demande-licence-runner.component';
 import {FormDemandeLicenceMasterComponent} from './form/form-demande-licence-master/form-demande-licence-master.component';
 import {NosDocumentsComponent} from './nos-documents/nos-documents.component';
-import {WelcomeComponent} from './welcome/welcome.component';
 import {ChampionnatComponent} from './competitions/championnat/championnat.component';
-import {EngagementLicenseComponent} from "./engagement-license/engagement-license.component";
-import {FormDemandeJugeComponent} from "./form/form-demande-juge/form-demande-juge.component";
-import {DemandeMutationComponent} from "./form/demande-mutation/demande-mutation.component";
+import {FormDemandeJugeComponent} from './form/form-demande-juge/form-demande-juge.component';
+import {DemandeMutationComponent} from './form/demande-mutation/demande-mutation.component';
+import {DemandeAffiliationComponent} from './form/demande-affiliation/demande-affiliation.component';
+import {EngagementLicenseComponent} from './engagement-license/engagement-license.component';
 
 function MCompMasterComponent() {
 }
@@ -86,7 +84,7 @@ function MCompMasterComponent() {
 const routes: Routes = [
   {
     path: '',
-    component: WelcomeComponent,
+    component: HomeComponent,
   },
   {
     path: 'home',
@@ -95,6 +93,10 @@ const routes: Routes = [
   {
     path: 'presentation',
     component: PresentationComponent,
+  },
+  {
+    path: 'engagement-licence',
+    component: EngagementLicenseComponent,
   },
   {
     path: 'communiquee_for',
@@ -142,10 +144,6 @@ const routes: Routes = [
     component: DemandeAffiliationComponent,
   },
   {
-    path: 'demande-master',
-    component: DemandeMasterComponent,
-  },
-  {
     path: 'licence-master',
     component: FormDemandeLicenceMasterComponent,
   },
@@ -176,10 +174,6 @@ const routes: Routes = [
   {
     path: 'demande-mutation',
     component: DemandeMutationComponent,
-  },
-  {
-    path: 'engagement-licence',
-    component: EngagementLicenseComponent,
   },
   {
     path: 'bureau',
@@ -269,10 +263,6 @@ const routes: Routes = [
   {
     path: 'champ_arabe20',
     component: Champarabe20Component,
-  },
-  {
-    path: 'not-found',
-    component: NotFoundComponent,
   },
   {
     path: 'news',
@@ -417,6 +407,10 @@ const routes: Routes = [
   {
     path: 'ChampCC',
     component: FinalCCComponent,
+  },
+  {
+    path: 'not-found',
+    component: NotFoundComponent,
   },
   {
     path: '**',

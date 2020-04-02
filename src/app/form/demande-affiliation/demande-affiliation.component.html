@@ -1,0 +1,199 @@
+<div class="container" align="center">
+  <div class="col-md-8">
+    <div class="titles no-margin">
+      <h4>Demande De Licence Athlete</h4>
+    </div>
+    <br>
+    <div class="info-panel">
+      <!-- Form Contact -->
+      <form [formGroup]="AffiliationForm" class="form-theme">
+        <fieldset>
+          <legend>DEMANDE D'AFFILIATION</legend>
+        </fieldset>
+        <div class="row">
+          <label>Date de la demande</label>
+          <div class="col-md-6">
+            <input
+              type="datetime-local" ,
+              class="form-control"
+              formControlName="Date"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <label>Gouvernorat</label>
+          <div class="col-md-6">
+            <input
+              type="text" ,
+              class="form-control"
+              formControlName="Gouvernorat"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <label>Nom de l'association ou Club</label>
+          <div class="col-md-6">
+            <input
+              type="text" ,
+              class="form-control"
+              formControlName="nom_club"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Siége social</label>
+            <input
+              type="text" ,
+              class="form-control"
+              formControlName="adresse"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Code postal</label>
+            <input
+              type="number" ,
+              class="form-control"
+              formControlName="codepostal"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <label>Numéro du visa</label>
+          <div class="col-md-6">
+            <input
+              type="number" ,
+              class="form-control"
+              formControlName="num_visa"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Date du visa</label>
+            <div class="col-md-6">
+              <input
+                type="date" ,
+                class="form-control"
+                formControlName="date_visa"
+              >
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <label>Couleurs</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="couleurs"
+          >
+        </div>
+        <div class="row">
+          <label>CCP ou CCB</label>
+          <input
+            type="number"
+            class="form-control"
+            formControlName="CCP"
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Tel</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="Tel"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Fax</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="Fax"
+            >
+          </div>
+        </div>
+        <fieldset>
+          <legend>COMPOSITION DU COMITE DIRECTEUR</legend>
+        </fieldset>
+        <div class="row">
+          <label>Président</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pres_comitedirecteur"
+          >
+        </div>
+        <div class="row">
+          <label>Secrétaire général</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="secretaire_comitedirecteur"
+          >
+        </div>
+        <div class="row">
+          <label>Trésorier général</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="tresorier_comitedirecteur"
+          >
+        </div>
+        <fieldset>
+          <legend>COMPOSITION DE LA SECTION D'ATHLETISME</legend>
+        </fieldset>
+        <div class="row">
+          <label>Président</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="pres_sectionathlet"
+          >
+        </div>
+        <div class="row">
+          <label>Secrétaire général</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="secretaire_sectionathlet"
+          >
+        </div>
+        <div class="row">
+          <label>Trésorier général</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="tresorier_sectionathlet"
+          >
+        </div>
+        <div class="row">
+          <label>Directeur Technique de la section</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="directeur_tech"
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Nom de la personne chargée des relations avec la Fédération</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nom_perschargee"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Adresse</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="adresse_perschargee"
+            >
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
