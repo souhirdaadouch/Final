@@ -11,12 +11,7 @@ export class FormDemandeLicenceAthleteComponent implements OnInit {
   licenceAthleteForm: FormGroup;
   montant = -1;
   ext = true;
-  cin: File;
-  photo: File;
-  certificat: File;
-  paiement: File;
   AffiliationForm: FormGroup;
-  DemandeJuge: FormGroup;
   constructor() { }
 
   ngOnInit() {
@@ -46,23 +41,6 @@ export class FormDemandeLicenceAthleteComponent implements OnInit {
       adresse_perschargee: new FormControl(null, Validators.required)
     });
 
-    this.DemandeJuge = new FormGroup({
-      nom_prenomJuge: new FormControl(null, Validators.required),
-      ddn: new FormControl(null, Validators.required),
-      niveau: new FormControl(null, Validators.required),
-      adresse: new FormControl(null, Validators.required),
-      codepostal: new FormControl(null, Validators.required),
-      poste: new FormControl(null, Validators.required),
-      CCP_CCB: new FormControl(null, Validators.required),
-      cin: new FormControl(null, Validators.required),
-      email: new FormControl(null, Validators.required),
-      tel: new FormControl(null, Validators.required),
-      poids: new FormControl(null, Validators.required),
-      taille: new FormControl(null, Validators.required),
-      certificat : new FormControl(null, Validators.required),
-      paiement : new FormControl(null, Validators.required),
-      photo : new FormControl(null, Validators.required)
-    })
     this.licenceAthleteForm = new FormGroup({
       club: new FormControl(null, Validators.required),
       ligue: new FormControl(null, Validators.required),
