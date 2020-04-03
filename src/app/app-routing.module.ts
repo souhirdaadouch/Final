@@ -99,6 +99,14 @@ import {MsrhMinFComponent} from "./results/champ-msrh/msrh-min-f/msrh-min-f.comp
 import {MsrhMinMComponent} from "./results/champ-msrh/msrh-min-m/msrh-min-m.component";
 import {MsrhSenFComponent} from "./results/champ-msrh/msrh-sen-f/msrh-sen-f.component";
 import {MsrhSenMComponent} from "./results/champ-msrh/msrh-sen-m/msrh-sen-m.component";
+import {FinalccCdtFComponent} from "./results/final-cc/finalcc-cdt-f/finalcc-cdt-f.component";
+import {FinalccCdtMComponent} from "./results/final-cc/finalcc-cdt-m/finalcc-cdt-m.component";
+import {FinalccJunMComponent} from "./results/final-cc/finalcc-jun-m/finalcc-jun-m.component";
+import {FinalccJunFComponent} from "./results/final-cc/finalcc-jun-f/finalcc-jun-f.component";
+import {FinalccMinFComponent} from "./results/final-cc/finalcc-min-f/finalcc-min-f.component";
+import {FinalccMinMComponent} from "./results/final-cc/finalcc-min-m/finalcc-min-m.component";
+import {FinalccSenMComponent} from "./results/final-cc/finalcc-sen-m/finalcc-sen-m.component";
+import {FinalccSenFComponent} from "./results/final-cc/finalcc-sen-f/finalcc-sen-f.component";
 
 function MCompMasterComponent() {
 }
@@ -316,6 +324,38 @@ const routes: Routes = [
   {
     path: 'msrhCadetF',
     component: MsrhCdtFComponent,
+  },
+  {
+    path: 'fccMinimeM',
+    component: FinalccMinMComponent,
+  },
+  {
+    path: 'fccMinimeF',
+    component: FinalccMinFComponent,
+  },
+  {
+    path: 'fccJuniorsF',
+    component: FinalccJunFComponent,
+  },
+  {
+    path: 'fccJuniorsM',
+    component: FinalccJunMComponent,
+  },
+  {
+    path: 'fccSeniorsM',
+    component: FinalccSenMComponent,
+  },
+  {
+    path: 'fccSeniorsF',
+    component: FinalccSenFComponent,
+  },
+  {
+    path: 'fccCadetM',
+    component: FinalccCdtMComponent,
+  },
+  {
+    path: 'fccCadetF',
+    component: FinalccCdtFComponent,
   },
   {
     path: 'Formation',

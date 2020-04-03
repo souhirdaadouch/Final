@@ -159,6 +159,14 @@ import { MsrhSenMComponent } from './results/champ-msrh/msrh-sen-m/msrh-sen-m.co
 import { MsrhSenFComponent } from './results/champ-msrh/msrh-sen-f/msrh-sen-f.component';
 import { MsrhCdtFComponent } from './results/champ-msrh/msrh-cdt-f/msrh-cdt-f.component';
 import { MsrhCdtMComponent } from './results/champ-msrh/msrh-cdt-m/msrh-cdt-m.component';
+import { FinalccCdtMComponent } from './results/final-cc/finalcc-cdt-m/finalcc-cdt-m.component';
+import { FinalccCdtFComponent } from './results/final-cc/finalcc-cdt-f/finalcc-cdt-f.component';
+import { FinalccJunFComponent } from './results/final-cc/finalcc-jun-f/finalcc-jun-f.component';
+import { FinalccJunMComponent } from './results/final-cc/finalcc-jun-m/finalcc-jun-m.component';
+import { FinalccSenMComponent } from './results/final-cc/finalcc-sen-m/finalcc-sen-m.component';
+import { FinalccSenFComponent } from './results/final-cc/finalcc-sen-f/finalcc-sen-f.component';
+import { FinalccMinFComponent } from './results/final-cc/finalcc-min-f/finalcc-min-f.component';
+import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-min-m.component';
 
 @NgModule({
   declarations: [
@@ -301,7 +309,15 @@ import { MsrhCdtMComponent } from './results/champ-msrh/msrh-cdt-m/msrh-cdt-m.co
     MsrhSenMComponent,
     MsrhSenFComponent,
     MsrhCdtFComponent,
-    MsrhCdtMComponent
+    MsrhCdtMComponent,
+    FinalccCdtMComponent,
+    FinalccCdtFComponent,
+    FinalccJunFComponent,
+    FinalccJunMComponent,
+    FinalccSenMComponent,
+    FinalccSenFComponent,
+    FinalccMinFComponent,
+    FinalccMinMComponent
   ],
   imports: [
     BrowserModule,
