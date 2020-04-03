@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ChampECService} from '../../_service/ChampEC';
 
 @Component({
   selector: 'app-quadriathlon',
@@ -7,18 +6,13 @@ import {ChampECService} from '../../_service/ChampEC';
   styleUrls: ['./quadriathlon.component.scss']
 })
 export class QuadriathlonComponent implements OnInit {
-  e: ChampECService;
-  public Quadm;
-  public Quadf;
 
-  constructor(e: ChampECService) {
-    this.e = e;
+
+  constructor() {
   }
 
   ngOnInit() {
-    let q = this.e.getJSON();
-    this.Quadm = q.QuadriMiM;
-    this.Quadf = q.QuadriMiF;
+
   }
 
 }
