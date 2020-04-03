@@ -7,20 +7,12 @@ import {ChampECService} from '../../_service/ChampEC';
   styleUrls: ['./decathlon.component.scss']
 })
 export class DecathlonComponent implements OnInit {
-  d: ChampECService;
-  public SenM;
-  public JunM;
-  public CadM;
 
-  constructor(d: ChampECService) {
-    this.d = d;
+
+  constructor() {
   }
 
   ngOnInit() {
-    let dec = this.d.getJSON();
-    this.CadM = dec.DecCM;
-    this.JunM = dec.DecJM;
-    this.SenM = dec.DecSM;
-  }
+    }
 
 }

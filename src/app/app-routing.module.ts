@@ -88,6 +88,9 @@ import {Champ10JuniorsFComponent} from "./results/champ10000m/champ10-juniors-f/
 import {Champ10JuniorsMComponent} from "./results/champ10000m/champ10-juniors-m/champ10-juniors-m.component";
 import {Champ10SeniorsFComponent} from "./results/champ10000m/champ10-seniors-f/champ10-seniors-f.component";
 import {Champ10SeniorsMComponent} from "./results/champ10000m/champ10-seniors-m/champ10-seniors-m.component";
+import {DecCadetComponent} from "./results/decathlon/dec-cadet/dec-cadet.component";
+import {DecJuniorsComponent} from "./results/decathlon/dec-juniors/dec-juniors.component";
+import {DecSeniorsComponent} from "./results/decathlon/dec-seniors/dec-seniors.component";
 
 function MCompMasterComponent() {
 }
@@ -261,6 +264,18 @@ const routes: Routes = [
   {
     path: 'quadriMinimeM',
     component: QuadriMinMComponent,
+  },
+  {
+    path: 'hepthCadet',
+    component: DecCadetComponent,
+  },
+  {
+    path: 'hepthJuniors',
+    component: DecJuniorsComponent,
+  },
+  {
+    path: 'hepthSeniors',
+    component: DecSeniorsComponent,
   },
   {
     path: 'Formation',

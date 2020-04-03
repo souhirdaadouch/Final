@@ -9,7 +9,7 @@ import {ChampECService} from '../../_service/ChampEC';
 export class HeptathlonComponent implements OnInit {
   h: ChampECService;
   public Hep;
-
+  p = 1;
   constructor(h: ChampECService) {
     this.h = h;
   }

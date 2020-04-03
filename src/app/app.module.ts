@@ -148,6 +148,9 @@ import { Champ10SeniorsMComponent } from './results/champ10000m/champ10-seniors-
 import { Champ10SeniorsFComponent } from './results/champ10000m/champ10-seniors-f/champ10-seniors-f.component';
 import { Champ10JuniorsMComponent } from './results/champ10000m/champ10-juniors-m/champ10-juniors-m.component';
 import { Champ10JuniorsFComponent } from './results/champ10000m/champ10-juniors-f/champ10-juniors-f.component';
+import { DecJuniorsComponent } from './results/decathlon/dec-juniors/dec-juniors.component';
+import { DecSeniorsComponent } from './results/decathlon/dec-seniors/dec-seniors.component';
+import { DecCadetComponent } from './results/decathlon/dec-cadet/dec-cadet.component';
 
 @NgModule({
   declarations: [
@@ -279,7 +282,10 @@ import { Champ10JuniorsFComponent } from './results/champ10000m/champ10-juniors-
     Champ10SeniorsMComponent,
     Champ10SeniorsFComponent,
     Champ10JuniorsMComponent,
-    Champ10JuniorsFComponent
+    Champ10JuniorsFComponent,
+    DecJuniorsComponent,
+    DecSeniorsComponent,
+    DecCadetComponent
   ],
   imports: [
     BrowserModule,
