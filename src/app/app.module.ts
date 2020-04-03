@@ -151,6 +151,14 @@ import { Champ10JuniorsFComponent } from './results/champ10000m/champ10-juniors-
 import { DecJuniorsComponent } from './results/decathlon/dec-juniors/dec-juniors.component';
 import { DecSeniorsComponent } from './results/decathlon/dec-seniors/dec-seniors.component';
 import { DecCadetComponent } from './results/decathlon/dec-cadet/dec-cadet.component';
+import { MsrhMinMComponent } from './results/champ-msrh/msrh-min-m/msrh-min-m.component';
+import { MsrhMinFComponent } from './results/champ-msrh/msrh-min-f/msrh-min-f.component';
+import { MsrhJunFComponent } from './results/champ-msrh/msrh-jun-f/msrh-jun-f.component';
+import { MsrhJunMComponent } from './results/champ-msrh/msrh-jun-m/msrh-jun-m.component';
+import { MsrhSenMComponent } from './results/champ-msrh/msrh-sen-m/msrh-sen-m.component';
+import { MsrhSenFComponent } from './results/champ-msrh/msrh-sen-f/msrh-sen-f.component';
+import { MsrhCdtFComponent } from './results/champ-msrh/msrh-cdt-f/msrh-cdt-f.component';
+import { MsrhCdtMComponent } from './results/champ-msrh/msrh-cdt-m/msrh-cdt-m.component';
 
 @NgModule({
   declarations: [
@@ -285,7 +293,15 @@ import { DecCadetComponent } from './results/decathlon/dec-cadet/dec-cadet.compo
     Champ10JuniorsFComponent,
     DecJuniorsComponent,
     DecSeniorsComponent,
-    DecCadetComponent
+    DecCadetComponent,
+    MsrhMinMComponent,
+    MsrhMinFComponent,
+    MsrhJunFComponent,
+    MsrhJunMComponent,
+    MsrhSenMComponent,
+    MsrhSenFComponent,
+    MsrhCdtFComponent,
+    MsrhCdtMComponent
   ],
   imports: [
     BrowserModule,

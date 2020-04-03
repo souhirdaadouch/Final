@@ -91,6 +91,14 @@ import {Champ10SeniorsMComponent} from "./results/champ10000m/champ10-seniors-m/
 import {DecCadetComponent} from "./results/decathlon/dec-cadet/dec-cadet.component";
 import {DecJuniorsComponent} from "./results/decathlon/dec-juniors/dec-juniors.component";
 import {DecSeniorsComponent} from "./results/decathlon/dec-seniors/dec-seniors.component";
+import {MsrhCdtFComponent} from "./results/champ-msrh/msrh-cdt-f/msrh-cdt-f.component";
+import {MsrhCdtMComponent} from "./results/champ-msrh/msrh-cdt-m/msrh-cdt-m.component";
+import {MsrhJunFComponent} from "./results/champ-msrh/msrh-jun-f/msrh-jun-f.component";
+import {MsrhJunMComponent} from "./results/champ-msrh/msrh-jun-m/msrh-jun-m.component";
+import {MsrhMinFComponent} from "./results/champ-msrh/msrh-min-f/msrh-min-f.component";
+import {MsrhMinMComponent} from "./results/champ-msrh/msrh-min-m/msrh-min-m.component";
+import {MsrhSenFComponent} from "./results/champ-msrh/msrh-sen-f/msrh-sen-f.component";
+import {MsrhSenMComponent} from "./results/champ-msrh/msrh-sen-m/msrh-sen-m.component";
 
 function MCompMasterComponent() {
 }
@@ -276,6 +284,38 @@ const routes: Routes = [
   {
     path: 'hepthSeniors',
     component: DecSeniorsComponent,
+  },
+  {
+    path: 'msrhMinimeM',
+    component: MsrhMinMComponent,
+  },
+  {
+    path: 'msrhMinimeF',
+    component: MsrhMinFComponent,
+  },
+  {
+    path: 'msrhJuniorsF',
+    component: MsrhJunFComponent,
+  },
+  {
+    path: 'msrhJuniorsM',
+    component: MsrhJunMComponent,
+  },
+  {
+    path: 'msrhSeniorsM',
+    component: MsrhSenMComponent,
+  },
+  {
+    path: 'msrhSeniorsF',
+    component: MsrhSenFComponent,
+  },
+  {
+    path: 'msrhCadetM',
+    component: MsrhCdtMComponent,
+  },
+  {
+    path: 'msrhCadetF',
+    component: MsrhCdtFComponent,
   },
   {
     path: 'Formation',
