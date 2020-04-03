@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -8,7 +8,9 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class DemandeAffiliationComponent implements OnInit {
   AffiliationForm: FormGroup;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
     this.AffiliationForm = new FormGroup({
@@ -26,13 +28,43 @@ export class DemandeAffiliationComponent implements OnInit {
       pres_comitedirecteur: new FormControl(null, Validators.required),
       secretaire_comitedirecteur: new FormControl(null, Validators.required),
       tresorier_comitedirecteur: new FormControl(null, Validators.required),
-      membres_comitedirecteur: new FormControl(null, Validators.required),
+      membres_comitedirecteur: new FormGroup({
+        name: new FormControl(null, Validators.required),
+        dateNaissance: new FormControl(null, Validators.required),
+        cin: new FormControl(null, Validators.required),
+        tache: new FormControl(null, Validators.required),
+        mobile: new FormControl(null, Validators.required),
+        mobile2: new FormControl(null, Validators.required),
+        email: new FormControl(null, Validators.required),
+        adresse: new FormControl(null, Validators.required),
+        image: new FormControl(null, Validators.required)
+      }),
       pres_sectionathlet: new FormControl(null, Validators.required),
       secretaire_sectionathlet: new FormControl(null, Validators.required),
       tresorier_sectionathlet: new FormControl(null, Validators.required),
       directeur_tech: new FormControl(null, Validators.required),
-      membres_sectionathlet: new FormControl(null, Validators.required),
-      entraineurs: new FormControl(null, Validators.required),
+      membres_sectionathlet: new FormGroup({
+        name: new FormControl(null, Validators.required),
+        dateNaissance: new FormControl(null, Validators.required),
+        cin: new FormControl(null, Validators.required),
+        tache: new FormControl(null, Validators.required),
+        mobile: new FormControl(null, Validators.required),
+        mobile2: new FormControl(null, Validators.required),
+        email: new FormControl(null, Validators.required),
+        adresse: new FormControl(null, Validators.required),
+        image: new FormControl(null, Validators.required)
+      }),
+      entraineurs: new FormGroup({
+        name: new FormControl(null, Validators.required),
+        dateNaissance: new FormControl(null, Validators.required),
+        cin: new FormControl(null, Validators.required),
+        tache: new FormControl(null, Validators.required),
+        mobile: new FormControl(null, Validators.required),
+        mobile2: new FormControl(null, Validators.required),
+        email: new FormControl(null, Validators.required),
+        adresse: new FormControl(null, Validators.required),
+        image: new FormControl(null, Validators.required)
+      }),
       nom_perschargee: new FormControl(null, Validators.required),
       adresse_perschargee: new FormControl(null, Validators.required)
     });

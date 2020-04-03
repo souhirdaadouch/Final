@@ -137,6 +137,11 @@ import {NgxPaginationModule} from 'ngx-pagination';
 import { FormDemandeJugeComponent } from './form/form-demande-juge/form-demande-juge.component';
 import { DemandeMutationComponent } from './form/demande-mutation/demande-mutation.component';
 import {DemandeAffiliationComponent} from './form/demande-affiliation/demande-affiliation.component';
+import { MsrJuniorsComponent } from './results/champ-tun-msrrades/msr-juniors/msr-juniors.component';
+import { MsrJuniorsFComponent } from './results/champ-tun-msrrades/msr-juniors-f/msr-juniors-f.component';
+import { MsrJuniorsMComponent } from './results/champ-tun-msrrades/msr-juniors-m/msr-juniors-m.component';
+import { MsrSeniorsFComponent } from './results/champ-tun-msrrades/msr-seniors-f/msr-seniors-f.component';
+import { MsrSeniorsMComponent } from './results/champ-tun-msrrades/msr-seniors-m/msr-seniors-m.component';
 
 @NgModule({
   declarations: [
@@ -257,7 +262,12 @@ import {DemandeAffiliationComponent} from './form/demande-affiliation/demande-af
     ChampionnatComponent,
     FormDemandeJugeComponent,
     DemandeMutationComponent,
-    EngagementLicenseComponent
+    EngagementLicenseComponent,
+    MsrJuniorsComponent,
+    MsrJuniorsFComponent,
+    MsrJuniorsMComponent,
+    MsrSeniorsFComponent,
+    MsrSeniorsMComponent
   ],
   imports: [
     BrowserModule,

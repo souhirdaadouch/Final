@@ -77,6 +77,11 @@ import {FormDemandeJugeComponent} from './form/form-demande-juge/form-demande-ju
 import {DemandeMutationComponent} from './form/demande-mutation/demande-mutation.component';
 import {DemandeAffiliationComponent} from './form/demande-affiliation/demande-affiliation.component';
 import {EngagementLicenseComponent} from './engagement-license/engagement-license.component';
+import {MsrJuniorsComponent} from "./results/champ-tun-msrrades/msr-juniors/msr-juniors.component";
+import {MsrJuniorsFComponent} from "./results/champ-tun-msrrades/msr-juniors-f/msr-juniors-f.component";
+import {MsrJuniorsMComponent} from "./results/champ-tun-msrrades/msr-juniors-m/msr-juniors-m.component";
+import {MsrSeniorsMComponent} from "./results/champ-tun-msrrades/msr-seniors-m/msr-seniors-m.component";
+import {MsrSeniorsFComponent} from "./results/champ-tun-msrrades/msr-seniors-f/msr-seniors-f.component";
 
 function MCompMasterComponent() {
 }
@@ -140,7 +145,7 @@ const routes: Routes = [
     component: NosDocumentsComponent,
   },
   {
-    path: 'demande-affiliation',
+    path: 'demandeaffiliation',
     component: DemandeAffiliationComponent,
   },
   {
@@ -208,8 +213,24 @@ const routes: Routes = [
     component: RecordComponent,
   },
   {
-    path: 'Projet',
-    component: ProjetComponent,
+    path: 'msrJuniors',
+    component: MsrJuniorsComponent,
+  },
+  {
+    path: 'msrJuniorsF',
+    component: MsrJuniorsFComponent,
+  },
+  {
+    path: 'msrJuniorsM',
+    component: MsrJuniorsMComponent,
+  },
+  {
+    path: 'msrSeniorsM',
+    component: MsrSeniorsMComponent,
+  },
+  {
+    path: 'msrSeniorsF',
+    component: MsrSeniorsFComponent,
   },
   {
     path: 'Formation',
