@@ -144,6 +144,10 @@ import { MsrSeniorsFComponent } from './results/champ-tun-msrrades/msr-seniors-f
 import { MsrSeniorsMComponent } from './results/champ-tun-msrrades/msr-seniors-m/msr-seniors-m.component';
 import { QuadriMinFComponent } from './results/quadriathlon/quadri-min-f/quadri-min-f.component';
 import { QuadriMinMComponent } from './results/quadriathlon/quadri-min-m/quadri-min-m.component';
+import { Champ10SeniorsMComponent } from './results/champ10000m/champ10-seniors-m/champ10-seniors-m.component';
+import { Champ10SeniorsFComponent } from './results/champ10000m/champ10-seniors-f/champ10-seniors-f.component';
+import { Champ10JuniorsMComponent } from './results/champ10000m/champ10-juniors-m/champ10-juniors-m.component';
+import { Champ10JuniorsFComponent } from './results/champ10000m/champ10-juniors-f/champ10-juniors-f.component';
 
 @NgModule({
   declarations: [
@@ -271,7 +275,11 @@ import { QuadriMinMComponent } from './results/quadriathlon/quadri-min-m/quadri-
     MsrSeniorsFComponent,
     MsrSeniorsMComponent,
     QuadriMinFComponent,
-    QuadriMinMComponent
+    QuadriMinMComponent,
+    Champ10SeniorsMComponent,
+    Champ10SeniorsFComponent,
+    Champ10JuniorsMComponent,
+    Champ10JuniorsFComponent
   ],
   imports: [
     BrowserModule,

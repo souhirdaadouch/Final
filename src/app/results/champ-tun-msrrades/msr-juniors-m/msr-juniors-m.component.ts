@@ -12,7 +12,7 @@ export class MsrJuniorsMComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const m = this.c.getJSON();
+    let m = this.c.getJSON();
     this.Junm = m.JunM;
   }
 }

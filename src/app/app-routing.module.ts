@@ -84,6 +84,10 @@ import {MsrSeniorsMComponent} from "./results/champ-tun-msrrades/msr-seniors-m/m
 import {MsrSeniorsFComponent} from "./results/champ-tun-msrrades/msr-seniors-f/msr-seniors-f.component";
 import {QuadriMinMComponent} from "./results/quadriathlon/quadri-min-m/quadri-min-m.component";
 import {QuadriMinFComponent} from "./results/quadriathlon/quadri-min-f/quadri-min-f.component";
+import {Champ10JuniorsFComponent} from "./results/champ10000m/champ10-juniors-f/champ10-juniors-f.component";
+import {Champ10JuniorsMComponent} from "./results/champ10000m/champ10-juniors-m/champ10-juniors-m.component";
+import {Champ10SeniorsFComponent} from "./results/champ10000m/champ10-seniors-f/champ10-seniors-f.component";
+import {Champ10SeniorsMComponent} from "./results/champ10000m/champ10-seniors-m/champ10-seniors-m.component";
 
 function MCompMasterComponent() {
 }
@@ -233,6 +237,22 @@ const routes: Routes = [
   {
     path: 'msrSeniorsF',
     component: MsrSeniorsFComponent,
+  },
+  {
+    path: 'champ10SeniorsF',
+    component: Champ10SeniorsFComponent,
+  },
+  {
+    path: 'champ10SeniorsM',
+    component: Champ10SeniorsMComponent,
+  },
+  {
+    path: 'champ10JuniorsF',
+    component: Champ10JuniorsFComponent,
+  },
+  {
+    path: 'champ10JuniorsM',
+    component: Champ10JuniorsMComponent,
   },
   {
     path: 'quadriMinimeF',

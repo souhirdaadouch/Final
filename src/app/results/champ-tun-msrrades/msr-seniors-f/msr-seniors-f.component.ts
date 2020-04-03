@@ -14,7 +14,7 @@ export class MsrSeniorsFComponent implements OnInit {
   }
 
   ngOnInit() {
-    const m = this.c.getJSON();
+    let m = this.c.getJSON();
     this.Senf = m.SenF;
   }
 
