@@ -14,8 +14,8 @@
     <div class="portfolioFilter">
       <div class="container">
         <h5><i class="fa fa-filter" aria-hidden="true"></i>Filter By:</h5>
-        <a href="#" data-filter="*" class="current">Show All</a>
-        <a href="#" [attr.data-filter]="'.'+gouv" class="current" *ngFor="let gouv of gouvernorats"> {{gouv}} </a>
+        <a href="#" data-filter="*" class="current" (click)="clicked($event)">Show All</a>
+        <a href="#" [attr.data-filter]="'.'+ gouv" class="current" *ngFor="let gouv of gouvernorats" (click)="clicked($event)"> {{gouv}} </a>
       </div>
     </div>
     <div class="container padding-top">

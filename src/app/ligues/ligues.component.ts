@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Ligue} from '../_service/shared_files/ligue.model';
+import {LigueService} from "../_service/ligue.service";
+import {Club} from "../_service/shared_files/club.model";
 
 @Component({
   selector: 'app-ligues',
@@ -7,18 +9,24 @@ import {Ligue} from '../_service/shared_files/ligue.model';
   styleUrls: ['./ligues.component.scss']
 })
 export class LiguesComponent implements OnInit {
-  first = new Ligue('1', 'LIGUE CENTRE', 'LIGUE CENTRE@google.com', 'facebook',
-    'twitter', '951585', '58485', 'rusia.jpg');
-  second = new Ligue('2', 'LIGUE ouest', 'LIGUE CENTRE@google.com', 'facebook',
-    'twitter', '951585', '58485', 'rusia.jpg');
-  third = new Ligue('1', 'LIGUE east', 'LIGUE CENTRE@google.com', 'facebook',
-    'twitter', '951585', '58485', 'rusia.jpg');
-  ligues = [this.first, this.second, this.third];
+  ligues = [];
 
-  constructor() {
+  constructor(public ligueService: LigueService) {
   }
 
   ngOnInit() {
+    this.ligueService.getLigues().subscribe(dataa => {
+      dataa = dataa.map(x => {
+        return {
+          id: x._id,
+          ...x
+        };
+      });
+      for (const data of dataa) {
+        this.ligues.push(new Ligue(data.id, data.name, data.president,
+          data.email, data.mobile, data.fax, data.image));
+      }
+      window.scroll(0, 0);
+    });
   }
-
 }

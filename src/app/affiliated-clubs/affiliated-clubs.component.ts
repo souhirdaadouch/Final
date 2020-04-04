@@ -23,7 +23,7 @@ export class AffiliatedClubsComponent implements OnInit {
   getInfos() {
     // tslint:disable-next-line:no-shadowed-variable
     for (const data of this.datas) {
-      this.clubs.push(new AffiliatedClub(data.id, data.name, data.adresse, data.codeLigue, data.telFax, data.sitClub));
+      this.clubs.push(new AffiliatedClub(data.id, data.name, data.adresse, data.codeLigue, data.telFax, data.sitClub, data.image));
     }
   }
 }

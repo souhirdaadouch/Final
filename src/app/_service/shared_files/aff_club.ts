@@ -4,6 +4,7 @@ export class AffiliatedClub {
               public codeLigue,
               public adresse,
               public telFax,
-              public sitClub
+              public sitClub,
+              public image
   ) {}
 }

@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Commission} from '../_service/shared_files/commission.model';
-// @ts-ignore
-import * as data from 'src/assets/data/jsons/comissions.json';
+import {CommissionFederaleService} from '../_service/commission-federale.service';
+import {HttpClient} from '@angular/common/http';
+
 
 @Component({
   selector: 'app-commission-federale',
@@ -9,19 +10,28 @@ import * as data from 'src/assets/data/jsons/comissions.json';
   styleUrls: ['./commission-federale.component.scss']
 })
 export class CommissionFederaleComponent implements OnInit {
-  datas: any = (data as any).default;
+
   commissions = [];
 
-  constructor() {
+  constructor(public commissionFederaleService: CommissionFederaleService, public http: HttpClient) {
   }
 
   ngOnInit() {
-    this.getInfos();
+    this.commissionFederaleService.getCommission().subscribe(dataa => {
+      if (dataa != null) {
+        dataa = dataa.map(x => {
+          return {
+            id: x._id,
+            ...x
+          };
+        });
+
+        for (const commission of dataa) {
+          this.commissions.push(
+            new Commission(commission.id, commission.name, commission.email, commission.commission, commission.image));
+        }
+      }
+    });
   }
 
-  getInfos() {
-    for (let data of this.datas) {
-  this.commissions.push(new Commission(data.name, data.email, data.commission, data.image));
-    }
-  }
 }

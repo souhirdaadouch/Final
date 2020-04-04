@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Worker} from '../_service/shared_files/worker.model';
-// @ts-ignore
-import * as data from 'src/assets/data/jsons/bureau.json';
+import {BureauService} from "../_service/bureau.service";
+import {HttpClient} from "@angular/common/http";
+
 
 @Component({
   selector: 'app-bureau',
@@ -9,21 +10,30 @@ import * as data from 'src/assets/data/jsons/bureau.json';
   styleUrls: ['./bureau.component.scss']
 })
 export class BureauComponent implements OnInit {
-  datas: any = (data as any).default;
+
   workers = [];
 
+  constructor(public bureauService: BureauService, private http: HttpClient) {
+  }
+
   ngOnInit() {
-    this.getInfos();
+    window.scroll(0, 0);
+    this.bureauService.getBureau().subscribe(dataa => {
+      if (dataa != null) {
+        dataa = dataa.map(x => {
+          return {
+            id: x._id,
+            ...x
+          };
+        });
+        for (const data of dataa) {
+          this.workers.push(new Worker(data.id,data.name, data.dateNaissance, data.cin, data.tache,
+            data.mobile, data.mobile2, data.email, data.image));
+        }
+      }
+    });
+
   }
 
-  getInfos() {
-    for (const data of this.datas) {
-      this.workers.push(new Worker(data.name, data.dateNaissance, data.cin, data.tache,
-        data.mobile, data.mobile2, data.email, data.image));
-    }
-  }
-
-  constructor() {
-  }
 
 }

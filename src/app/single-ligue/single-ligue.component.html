@@ -6,10 +6,9 @@
           <div class="col-md-9">
             <h1>{{ligue.name}}</h1>
             <ul class="general-info">
+              <li *ngIf="ligue.president"><h6><strong><i class="fa fa-suitcase"></i>President</strong><br>{{ligue.president}}</h6></li>
               <li *ngIf="ligue.email"><h6><strong><i class="fa fa-mail-reply"></i>email</strong><br> {{ligue.email}}</h6></li>
               <li *ngIf="ligue.mobile"><h6><strong><i class="fa fa-phone"> </i>Téléphone</strong><br>{{ligue.mobile}}</h6></li>
-              <li *ngIf="ligue.pageFacebook"><h6><strong><i class="fa fa-facebook"> </i></strong><br>{{ligue.pageFacebook}}</h6></li>
-              <li *ngIf="ligue.pageTwitter"><h6><strong><i class="fa fa-fax"></i></strong><br>{{ligue.pageTwitter}}</h6></li>
               <li *ngIf="ligue.fax"><h6><strong><i class="fa fa-fax"></i>Fax</strong><br>{{ligue.fax}}</h6></li>
             </ul>
           </div>
@@ -17,7 +16,7 @@
       </div>
     </div>
   </div>
-  <div class="bg-image-team" [ngStyle]="{'background' : 'url(assets/img/ligues/'+ligue.image+')'}"></div>
+  <div class="bg-image-team" [ngStyle]="{'background' : 'url('+ligue.image+')'}"></div>
 </div>
 <br>
 <br>
