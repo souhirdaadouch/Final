@@ -27,7 +27,7 @@ export class SingleClubComponent implements OnInit {
 
           this.club = new Club(data.id, data.name, data.president_secretaireGenerale,
             data.mobilePresident_secretaireGenerale, data.mobileClub, data.faxClub, data.adresse, data.gouvernorat,
-            data.gouvernoratFR.replace(/\s/g, ''),
+            data.gouvernoratFR.replace(/\s/g, ''), data.affiliated,
             data.image);
         });
       }

@@ -27,6 +27,7 @@ export class ClubsService {
       adresse,
       gouvernorat,
       gouvernoratFR,
+      affiliated,
       image
     }>('http://127.0.0.1:3000/api/club/' + id);
   }

@@ -10,6 +10,7 @@ export class Club {
               public adresse,
               public gouvernorat,
               public gouvernoratFR,
+              public affiliated: boolean,
               public image
   ) {
   }

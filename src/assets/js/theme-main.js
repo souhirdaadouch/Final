@@ -1,5 +1,4 @@
 
-
 //main.JS
 //--------------------------------------------------------------------------------------------------------------------------------
 //This is JS file that contains principal fuctions of theme */
@@ -192,7 +191,6 @@ $(document).ready(function($) {
 
 
     //=================================== Portfolio Filters  ==============================//
-
       $(window).load(function(){
           var $container = $('.portfolioContainer');
           $container.isotope({

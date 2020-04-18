@@ -1,13 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterContentChecked, AfterViewInit, Component, OnInit} from '@angular/core';
 import {Club} from '../_service/shared_files/club.model';
 import {ClubsService} from '../_service/clubs.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-clubs',
   templateUrl: './clubs.component.html',
   styleUrls: ['./clubs.component.scss']
 })
-export class ClubsComponent implements OnInit {
+export class ClubsComponent implements OnInit, AfterContentChecked {
 
   clubs: Club[] = [];
   gouvernorats = [];
@@ -15,6 +17,25 @@ export class ClubsComponent implements OnInit {
   constructor(public clubsService: ClubsService) {
 
   }
+
+  ngAfterContentChecked(): void {
+    const $container = $('.portfolioContainer');
+    $('.portfolioFilter a').click(function () {
+      $('.portfolioFilter .current').removeClass('current');
+      $(this).addClass('current');
+      const selector = $(this).attr('data-filter');
+      $container.isotope({
+        filter: selector,
+        animationOptions: {
+          duration: 750,
+          easing: 'linear',
+          queue: false
+        }
+      });
+      return false;
+    });
+  }
+
 
   ngOnInit() {
     this.clubsService.getClubs().subscribe(dataa => {
@@ -27,13 +48,12 @@ export class ClubsComponent implements OnInit {
       for (const data of dataa) {
         this.clubs.push(new Club(data.id, data.name, data.president_secretaireGenerale,
           data.mobilePresident_secretaireGenerale, data.mobileClub, data.faxClub, data.adresse, data.gouvernorat,
-          data.gouvernoratFR.replace(/\s/g, ''),
+          data.gouvernoratFR.replace(/\s/g, ''), data.affiliated,
           data.image));
       }
       this.getGoveronrat();
       window.scroll(0, 0);
     });
-
   }
 
   getGoveronrat() {
@@ -43,6 +63,8 @@ export class ClubsComponent implements OnInit {
         this.gouvernorats.push(club.gouvernoratFR.replace(/\s/g, ''));
       }
     }
+
+
   }
 
   clicked(event: Event) {
