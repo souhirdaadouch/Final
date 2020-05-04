@@ -1,3 +1,4 @@
+
 <app-heading></app-heading>
 <div class="container" align="center">
   <div class="col-md-8">
@@ -7,7 +8,7 @@
     <br>
     <div class="info-panel">
       <!-- Form Contact -->
-      <form [formGroup]="licenceAthleteFormPromotion" class="form-theme">
+      <form [formGroup]="licenceAthleteFormPromotion"  (submit)="onSubmit()" class="form-theme">
         <div class="row">
           <div class="col-md-6">
             <label>Club *</label>
@@ -146,6 +147,52 @@
         </div>
         <div class="row">
           <div class="col-md-12">
+            <label>Photo *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="photo"
+              (change)="onImagePicked($event)"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>CIN *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="cin"
+              #filePicker
+              (change)="onImagePicked($event)"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Justificatif de Paiement *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="paiement"
+              (change)="onImagePicked($event)"
+
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Certificat Médical *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="certificat"
+              (change)="onImagePicked($event)"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <button
               type="submit"
               class="btn btn-lg btn-primary"
@@ -176,4 +223,3 @@
 <br>
 <br>
 <br>
-

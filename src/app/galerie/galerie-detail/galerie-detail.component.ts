@@ -3,6 +3,8 @@ import {ActivatedRoute} from '@angular/router';
 import {GallerieComponent} from '../gallerie.component';
 import {GalerieList} from '../../shared/galerieList.model';
 import * as data from 'src/assets/data/json/Galerie/PicturesPaths.json';
+import {GalerieService} from "../../_service/galerie.service";
+import {Subscription} from "rxjs";
 
 @Component({
   providers: [GallerieComponent],
@@ -11,35 +13,32 @@ import * as data from 'src/assets/data/json/Galerie/PicturesPaths.json';
   styleUrls: ['./galerie-detail.component.scss']
 })
 export class GalerieDetailComponent implements OnInit {
-  datas: any = (data as any).default;
   galerieId;
   galerie: GalerieList;
+  private postsSub: Subscription;
+
+
   // push data into the array from the backend
   picturePath = [];
-  constructor(public route: ActivatedRoute, public galeris: GallerieComponent) {
+  constructor(public route: ActivatedRoute, public galeris: GallerieComponent, private galerieService: GalerieService) {
 
   }
 
   ngOnInit() {
     this.route.params.subscribe(
       data => {
+        console.log(data.id)
         this.galerieId = data.id;
       }
     );
-    this.galerie = this.galeris.galerie.find(value => value.galerieId == this.galerieId);
-
-    this.getPictures();
+    this.galerieService.getPictures(this.galerieId);
+    // this.picturePath = this.galerieService.picturePath;
+    this.postsSub = this.galerieService.getPostUpdateListener()
+      .subscribe((posts: []) => {
+        this.picturePath = posts;
+      });
   }
 
-  getPictures() {
-    for (const data of this.datas) {
-      if (this.galerieId == data.id) {
-        for (const path of data.pathImg) {
-          this.picturePath.push(path);
-        }
-      }
-    }
-    console.log(this.datas);
-  }
+
 
 }

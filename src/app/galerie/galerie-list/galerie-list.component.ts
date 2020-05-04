@@ -8,6 +8,7 @@ import {GalerieList} from '../../shared/galerieList.model';
 })
 export class GalerieListComponent implements OnInit {
   @Input() galerie: GalerieList;
+  @Input() i: number;
 
   constructor() { }
 

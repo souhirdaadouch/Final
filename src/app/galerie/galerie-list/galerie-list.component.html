@@ -10,13 +10,13 @@
         </div>
         <div class="info-player">
           <span class="number-player">
-              {{galerie.galerieId}}
+              {{i+1}}
           </span>
           <h4>
             {{galerie.galerieTitle}}
           </h4>
         </div>
-        <a class="btn" [routerLink]="'/galerie-detail/'+ galerie.galerieId" target="_blank">
+        <a class="btn" [routerLink]="'/galerie-detail/'+ galerie.galerieTitle" target="_blank">
           Album<i aria-hidden="true" class="fa fa-angle-right"></i></a>
       </div>
 

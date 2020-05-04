@@ -13,7 +13,6 @@ export class HeadingComponent implements OnInit {
   }
   getYear() {
     this.date = (new Date()).getFullYear();
-    console.log(this.date);
     return this.date;
   }
 }

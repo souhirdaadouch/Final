@@ -1,191 +1,197 @@
-<app-heading></app-heading>
 <div class="container" align="center">
   <div class="col-md-8">
     <div class="titles no-margin">
-      <h4>Demande De Licence Runner</h4>
+      <h4>DEMANDE D'AFFILIATION</h4>
     </div>
     <br>
     <div class="info-panel">
       <!-- Form Contact -->
-      <form [formGroup]="licenceRunnerForm" class="form-theme" (ngSubmit)="onSubmit()">
+      <form [formGroup]="AffiliationForm" (submit)="onSubmit()" class="form-theme">
         <div class="row">
           <div class="col-md-6">
-            <label>Club *</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="club"
-            >
-          </div>
-          <div class="col-md-6">
-            <label>Ligue *</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="ligue"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label>Nom *</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="nom"
-            >
-          </div>
-          <div class="col-md-6">
-            <label>Prenom *</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="prenom"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label>Date De Naissance *</label>
+            <label>Date De La Demande</label>
             <input
               type="date"
               class="form-control"
-              formControlName="dateNaissance"
+              formControlName="date"
             >
           </div>
           <div class="col-md-6">
-            <label>Lieu *</label>
+            <label>Gouvernorat</label>
             <input
               type="text"
               class="form-control"
-              formControlName="lieu"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label>Poids *</label>
-            <input
-              type="number"
-              class="form-control"
-              formControlName="poids"
-            >
-          </div>
-          <div class="col-md-6">
-            <label>Taille *</label>
-            <input
-              type="number"
-              class="form-control"
-              formControlName="taille"
-            >
-          </div>
-        </div>
-        <br>
-        <div>
-          <label align="center">Sexe *</label>
-        </div>
-        <br>
-        <div class="row">
-          <div class="radio col-md-6" *ngFor="let sexe of sexes">
-            <input
-              type="radio"
-              name = "sexe"
-              [value]="sexe"
-              formControlName="sexe"
-            >  {{sexe}}
-          </div>
-        </div>
-        <br>
-        <div class="row">
-          <div class="col-md-12">
-            <label>Nationalité</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="nationalite"
-            >
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <label>Categorie *</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="categorie"
-            >
-          </div>
-          <div class="col-md-6">
-            <label>Num Ancienne Licence *</label>
-            <input
-              type="number"
-              class="form-control"
-              formControlName="numAncienneLicence"
+              formControlName="gouvernorat"
             >
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <label>Adresse *</label>
+            <label>Nom de l'Association ou Club</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nom_club"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Siége social</label>
             <input
               type="text"
               class="form-control"
               formControlName="adresse"
             >
           </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12">
-            <label>Numero De Telephone *</label>
+          <div class="col-md-6">
+            <label>Code postal</label>
             <input
               type="number"
               class="form-control"
-              formControlName="numTel"
+              formControlName="codepostal"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Numéro du visa</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="num_visa"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Date Du Visa</label>
+            <input
+              type="date"
+              class="form-control"
+              formControlName="date_visa"
             >
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <label>Photo *</label>
+            <label>CCP ou CCB</label>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              name="photo"
-              (change)="onImagePicked($event)"
+              formControlName="ccp"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label>Tel</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="tel"
+            >
+          </div>
+          <div class="col-md-6">
+            <label>Fax</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="fax"
+            >
+          </div>
+        </div>
+        <fieldset>
+          <legend>COMPOSITION DU COMITE DIRECTEUR</legend>
+        </fieldset>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Président</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="pres_comitedirecteur"
             >
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <label>CIN *</label>
+            <label>Secrétaire général</label>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              name="ccin"
-              (change)="onImagePicked($event)"
+              formControlName="secretaire_comitedirecteur"
             >
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <label>Justificatif de Paiement *</label>
+            <label>Trésorier général</label>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              name="paiement"
-              (change)="onImagePicked($event)"
-
+              formControlName="tresorier_comitedirecteur"
+            >
+          </div>
+        </div>
+        <fieldset>
+          <legend>COMPOSITION DE LA SECTION D'ATHLETISME</legend>
+        </fieldset>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Président</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="pres_sectionathlet"
             >
           </div>
         </div>
         <div class="row">
           <div class="col-md-12">
-            <label>Certificat Médical *</label>
+            <label>Secrétaire général</label>
             <input
-              type="file"
+              type="text"
               class="form-control"
-              name="certificat"
-              (change)="onImagePicked($event)"
+              formControlName="secretaire_sectionathlet"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Trésorier général</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="tresorier_sectionathlet"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Directeur Technique de la section</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="directeur_tech"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Nom de la personne chargée des relations avec la FTA</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="nom_perschargee"
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Adresse</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="adresse_perschargee"
             >
           </div>
         </div>
@@ -194,31 +200,17 @@
             <button
               type="submit"
               class="btn btn-lg btn-primary"
-              [disabled]="!licenceRunnerForm.valid"
-
+              [disabled]="!AffiliationForm.valid"
             >
               Envoyer
             </button>
           </div>
         </div>
       </form>
-      <!-- End Form Contact -->
     </div>
   </div>
 </div>
 <br>
 <br>
 <br>
-<app-nb [montant]="montant" [ext]="ext"></app-nb>
-<div class="container" align="center">
-  <div class="col-md-8">
-    <div class="titles no-margin">
-      <h4>+ Certificat medical d'aptitude de Sport (exemple)</h4>
-      <a href="assets/img/certificat.pdf" download>Telecharger le certificat</a>
-      <img src="assets/img/image_viber_2020-01-24_22-24-58.jpg">
-    </div>
-  </div>
-</div>
-<br>
-<br>
-<br>
+

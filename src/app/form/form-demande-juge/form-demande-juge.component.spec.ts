@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DemandeMasterComponent } from './demande-master.component';
+import { FormDemandeJugeComponent } from './form-demande-juge.component';
 
-describe('DemandeMasterComponent', () => {
-  let component: DemandeMasterComponent;
-  let fixture: ComponentFixture<DemandeMasterComponent>;
+describe('FormDemandeJugeComponent', () => {
+  let component: FormDemandeJugeComponent;
+  let fixture: ComponentFixture<FormDemandeJugeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemandeMasterComponent ]
+      declarations: [ FormDemandeJugeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DemandeMasterComponent);
+    fixture = TestBed.createComponent(FormDemandeJugeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,3 +1,3 @@
 export class Centre {
-  constructor(public id: number, public name: string, public directeur: string, public num: string) {}
+  constructor(public _id: string, public name: string, public directeur: string, public num: string) {}
 }

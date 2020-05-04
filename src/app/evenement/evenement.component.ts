@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Evenement} from '../shared/evenement.model';
 
 import * as data from 'src/assets/data/evenement.json';
+import {EvenementService} from "../_service/evenement.service";
+import {Subscription} from "rxjs";
+import {Centre} from "../shared/centre.model";
 
 @Component({
   selector: 'app-evenement',
@@ -9,23 +12,28 @@ import * as data from 'src/assets/data/evenement.json';
   styleUrls: ['./evenement.component.scss']
 })
 export class EvenementComponent implements OnInit {
-  datas: any = (data as any).default;
 
   evenements: Evenement[] = [];
+  private eventsSub: Subscription;
 
 
-  constructor() {
-  this.getEvent();
+
+  constructor(private evenmentService: EvenementService) {
+
   }
 
   ngOnInit() {
+    this.evenmentService.getEvent();
+    this.eventsSub = this.evenmentService.getPostUpdateListener()
+      .subscribe((events: Evenement[]) => {
+        this.evenements = events;
+      });
+    this.evenements = this.evenmentService.evenements;
+      // .subscribe(data => {
+      //   console.log(data);
+      //   this.evenements = data;
+      // });
   }
 
-  getEvent() {
-    for (const data of this.datas) {
-      this.evenements.push(new Evenement(data.eventId, data.eventPath, data.eventTitle,
-        data.eventDate, data.eventComments, data.eventImgPath, data.eventDescrip));
-    }
-  }
 
 }

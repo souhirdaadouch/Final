@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-form-demande-licence-athlete-promotion',
@@ -11,7 +12,9 @@ export class FormDemandeLicenceAthletePromotionComponent implements OnInit {
   licenceAthleteFormPromotion: FormGroup;
   montant = -1;
   ext = true;
-  constructor() { }
+
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit() {
     this.licenceAthleteFormPromotion = new FormGroup({
@@ -29,6 +32,55 @@ export class FormDemandeLicenceAthletePromotionComponent implements OnInit {
       numAncienneLicence: new FormControl(null, Validators.required),
       adresse: new FormControl(null, Validators.required),
       numTel: new FormControl(null, Validators.required),
+      cin: new FormControl(null, Validators.required),
+      certificat: new FormControl(null, Validators.required),
+      paiement: new FormControl(null, Validators.required),
+      photo: new FormControl(null, Validators.required)
+
+    });
+  }
+
+  onImagePicked(event: Event) {
+    const file = (event.target as HTMLInputElement).files;
+    const name = (event.target as HTMLInputElement).name;
+    if (name === 'photo') {
+      this.licenceAthleteFormPromotion.patchValue({photo: file[0]});
+    } else if (name === 'cin') {
+      this.licenceAthleteFormPromotion.patchValue({cin: file[0]});
+    } else if (name === 'paiement') {
+      this.licenceAthleteFormPromotion.patchValue({paiement: file[0]});
+    } else if (name === 'certificat') {
+      this.licenceAthleteFormPromotion.patchValue({certificat: file[0]});
+    }
+    this.licenceAthleteFormPromotion.get(name).updateValueAndValidity();
+  }
+
+
+  onSubmit() {
+    const postData = new FormData();
+    for (const field in this.licenceAthleteFormPromotion.controls) {
+      const control = this.licenceAthleteFormPromotion.get(field);
+      if (control.value) {
+        if (field in ['cin', 'photo', 'paiement', 'certificat']) {
+          postData.append(field, control.value, field);
+        } else {
+          postData.append(field, control.value);
+        }
+      } else {
+        if (field in ['cin', 'photo', 'paiement', 'certificat']) {
+          postData.append(field, '', field);
+        } else {
+          postData.append(field, '');
+        }
+
+      }
+    }
+    this.licenceAthleteFormPromotion.reset();
+    this.http
+      .post<any>('http://localhost:3000/api/licence_athlete_promotion',
+        postData
+      ).subscribe(() => {
+      console.log('done');
     });
   }
 

@@ -7,7 +7,7 @@
     <br>
     <div class="info-panel">
       <!-- Form Contact -->
-      <form class="form-theme" [formGroup]="licenceDirigeantForm" (ngSubmit)="onSubmit()">
+      <form class="form-theme" [formGroup]="licenceDirigeantForm" (ngSubmit)="onSubmit() ">
         <div class="row">
           <div class="col-md-6">
             <label>Nom *</label>
@@ -85,7 +85,7 @@
               class="form-group"
               *ngFor="let diplome of licenceDirigeantForm.get('diplomes').controls; let i=index"
             >
-              <input type="text" class="form-control" [formControlName]="i">
+              <input type="file" name="diplomes" (change)="onImagePicked($event)" class="form-control" [formControlName]="i">
             </div>
             <button class="btn btn-primary" type="button" (click)="onAddDiplome()">Ajouter Diplome</button>
             <br>
@@ -140,10 +140,47 @@
         </div>
         <div class="row">
           <div class="col-md-12">
+            <label>Copie CIN *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="ccin"
+              (change)="onImagePicked($event)"
+            >
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Photo *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="photo"
+              (change)="onImagePicked($event)"
+
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <label>Justificatif de Paiement *</label>
+            <input
+              type="file"
+              class="form-control"
+              name="paiement"
+              (change)="onImagePicked($event)"
+
+            >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
             <button
               type="submit"
               class="btn btn-lg btn-primary"
               [disabled]="!licenceDirigeantForm.valid"
+
             >Envoyer</button>
           </div>
         </div>
@@ -166,4 +203,3 @@
 <br>
 <br>
 <br>
-

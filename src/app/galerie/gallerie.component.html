@@ -25,7 +25,9 @@
   <!-- Section Area - Content Central -->
   <section class="content-info">
     <div class="row portfolioContainer">
-    <app-galerie-list *ngFor="let galerieEl of galerie" [galerie]="galerieEl" class="col-lg-3"  ></app-galerie-list>
+    <app-galerie-list *ngFor="let galerieEl of galerie; let i=index" [i]="i" [galerie]="galerieEl" class="col-lg-3"  >
+
+    </app-galerie-list>
     </div>
   </section>
   <!-- End Section Area -  Content Central -->

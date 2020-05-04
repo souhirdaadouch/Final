@@ -1,32 +1,41 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 
 import {Centre} from '../shared/centre.model';
-
 import * as data from 'src/assets/data/json/Centre/Centre.json';
+import {CentreDeFormationService} from '../_service/centre-de-formation.service';
+import {Subscription} from "rxjs";
+import {GalerieList} from "../shared/galerieList.model";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-centre-de-formation',
   templateUrl: './centre-de-formation.component.html',
-  styleUrls: ['./centre-de-formation.component.scss']
+  styleUrls: ['./centre-de-formation.component.scss'],
 })
-export class CentreDeFormationComponent implements OnInit {
-  datas: any = (data as any).default;
+export class CentreDeFormationComponent implements OnInit, OnDestroy {
 
   centres: Centre[] = [];
+  private postsSub: Subscription;
 
 
-  constructor() {
-    this.getCentre();
+  constructor(private centreService: CentreDeFormationService, private http: HttpClient) {
   }
 
   ngOnInit() {
+    this.centreService.getCentre();
+    this.postsSub = this.centreService.getPostUpdateListener()
+      .subscribe((centres: Centre[]) => {
+        this.centres = centres;
+      });
+    this.centres = this.centreService.centres;
+
   }
 
-  getCentre() {
-    for (const data of this.datas) {
-      this.centres.push(new Centre(data.id, data.name, data.directeur, data.tel));
-    }
-
+  ngOnDestroy(): void {
+    this.postsSub.unsubscribe();
   }
+
 
 }
+
+
