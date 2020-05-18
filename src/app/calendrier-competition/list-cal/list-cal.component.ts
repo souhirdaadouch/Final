@@ -10,7 +10,8 @@ import {NgxPaginationModule} from 'ngx-pagination';
 })
 export class ListCalComponent implements OnInit {
 
-  calendrier: CalendrierModel[];
+  calendrier;
+  // calendrier: CalendrierModel[];
   p = 1;
 
   constructor(private calendrierServ: CalendrierService) {

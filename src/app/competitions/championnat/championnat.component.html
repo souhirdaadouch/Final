@@ -28,30 +28,14 @@
     <h2 class="text-center"> Liste des Championnats</h2>
   </div>
   <br><br><br>
-  <table class="tab-content">
-    <thead>
-    <tr>
-      <th> Nom Du Championnat</th>
-      <th class="text-center"> Date</th>
-      <th class="text-center"> Lieu</th>
-      <th class="text-center"> Organisateur</th>
-      <th class="text-center"> Niveau</th>
-      <th class="text-center"> Catégorie</th>
-      <th class="text-center"> Type</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor="let c of calendrierChampionnat">
-      <td><a class="btn-light" routerLink="/{{c.link}}">{{c.manifestation}}</a></td>
-      <td class="text-center">{{c.jour}}/{{c.moisN}}/{{c.annee}}</td>
-      <td class="text-center">{{c.lieu}}</td>
-      <td class="text-center">{{c.organisateur}}</td>
-      <td class="text-center">{{c.niveau}}</td>
-      <td class="text-center">{{c.categorie}}</td>
-      <td class="text-center">{{c.type}}</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="container col-lg-8">
+
+    <div class="list-group  " *ngFor="let c of champs">
+      <a href="http://localhost:3000/uploads/{{c.name}}" target="_blank" class="list-group-item list-group-item-action "
+         download="reglement" STYLE="color: #d52f37;">{{c.championnatName}}</a>
+    </div>
+
+  </div>
   <br>
   <br>
   <br>

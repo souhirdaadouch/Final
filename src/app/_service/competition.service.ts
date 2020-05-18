@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 import competitions from 'src/assets/data/comp_j/competitions.json';
 import {CompetitionModel} from '../shared/shared_files/competition.model';
 
@@ -9,11 +10,11 @@ export class CompetitionService {
 
     public competitionsList: CompetitionModel [] = competitions;
 
-    constructor() {
+    constructor(private http: HttpClient) {
     }
 
-    getAllComps(): CompetitionModel [] {
-        return this.competitionsList;
+    getAllComps() {
+        return this.http.get('http://localhost:3000/api/competition');
     }
 
     getCompById(id): CompetitionModel {

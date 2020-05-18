@@ -12,8 +12,6 @@
                 <div class="col-md-4">
                     <div class="breadcrumbs">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>Inner Page</li>
                         </ul>
                     </div>
                 </div>
@@ -23,26 +21,11 @@
     <!-- End Section Title -->
 </div>
 <br>
-<div class="container" style="font-size: large">
-    <h3 class="text-center"> Programme Technique</h3><br>
-    <h3 class="text-center"> Benjamins A et B</h3>
-    <br>
-    <app-table-row [rows]="benjamins" [columns]="progCols" [rowsIndex]="progCols"></app-table-row>
-    <br>
-    <br>
-    <br>
-    <h3 class="text-center"> Caractéristiques des Courses de Haies</h3>
-    <app-caract-haies></app-caract-haies>
+<div class="container text-center" style="font-size: large">
 
+    <embed class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-8" [src]="sanitizer.bypassSecurityTrustResourceUrl(benjpath)" type="application/pdf" width="60%"
+           height="800px"/>
 
-    <br>
-    <br>
-    <br>
-    <app-part-piste-benjamin></app-part-piste-benjamin>
-    <br>
-    <h3 class="text-center"> Benjamins A et B</h3>
-    <br>
-    <app-table-row [rows]="minimes" [columns]="progCols" [rowsIndex]="progCols"></app-table-row>
     <br>
     <br>
     <br>

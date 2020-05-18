@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {CompetitionService} from '../../_Service/competition.service';
-import {CompetitionModel} from '../../shared/shared_files/competition.model';
+import {CompModel} from '../../shared/shared_files/comp.model';
 
 @Component({
     selector: 'app-list-comp',
@@ -8,13 +8,25 @@ import {CompetitionModel} from '../../shared/shared_files/competition.model';
     styleUrls: ['./list-comp.component.scss']
 })
 export class ListCompComponent implements OnInit {
-    competitions: CompetitionModel [];
+    @Input() listComp: CompModel [];
 
     constructor(private compService: CompetitionService) {
     }
 
     ngOnInit() {
-        this.competitions = this.compService.getAllComps();
+        this.compService.getAllComps()
+            .subscribe(comps => {
+                this.listComp = comps as CompModel [];
+            });
+
+        /*this.competitions = this.compService.getAllComps();
+        console.log(this.competitions);*/
+
+
+        /*this.route.params
+            .subscribe((data) => {
+                console.log(data);
+            });*/
 
     }
 

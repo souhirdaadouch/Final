@@ -1,7 +1,7 @@
 <!-- layout-->
 <div id="layout">
   <!-- Section Title -->
-  <div class="section-title" style="background:url(assets/img/Logo vectoriel FTA typo 2 (2) (2).png)">
+  <div class="section-title" style="background:url(../../assets/img/Logo vectoriel FTA typo 2 (2) (2).png)">
     <div class="container">
       <div class="row">
         <div class="col-md-8">
@@ -44,32 +44,22 @@
     </div>
     <!-- End Nav Filters -->
 
+
     <div class="container padding-top  ">
       <div class="row portfolioContainer  " >
-      <app-itemplayer class="col-md-6 col-lg-4 col-xl-3"  *ngFor="let player of liste" [player]="player"></app-itemplayer>
+      <app-itemplayer class="col-md-6 col-lg-4 col-xl-3"  *ngFor="let player of liste | paginate: { itemsPerPage: 8, currentPage: p }" [player]="player "></app-itemplayer>
+        <br>
+        <br>
+        <br>
       </div>
     </div>
-        <!-- pagination -->
-        <div class="container centered " style="padding-bottom: 80px">
-          <div class="row">
-            <div class="col align-items-center">
-        <nav aria-label="...">
-          <ul class="pagination">
-            <li class="page-item {{previous}}">
-              <a class="page-link" routerLink="/player-list/{{num - 1}}" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item {{page.active}} " *ngFor="let page of pages" ><a class="page-link " routerLink="/player-list/{{page.nb}}">{{page.nb}}</a></li>
-            <li class="page-item {{next}}">
-              <a class="page-link"  routerLink="/player-list/{{num + 1}}">Next</a>
-            </li>
-          </ul>
-        </nav>
-        </div>
-          </div>
-        </div>
+    <pagination-controls (pageChange)=" p = $event" class="text-center"></pagination-controls>
 
-        <!-- end pagination -->
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <!-- End Newsletter -->
@@ -77,3 +67,5 @@
   <!-- End Section Area -  Content Central -->
 </div>
 <!-- End layout-->
+<br>
+<br>

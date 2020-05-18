@@ -2,13 +2,10 @@
 <!-- Item Player -->
   <div class="forward">
   <div class="item-player">
-    <div class="head-player">
-      <img alt="location-team" src="assets/img/Logo vectoriel FTA typo 2 (2) (2).png"/>
+    <div class="head-player" *ngIf="player.image">
+      <img alt="location-team" src="http://localhost:3000/uploads/{{player.image}}"/>
     </div>
     <div class="info-player">
-                                    <span class="number-player">
-                                        13
-                                    </span>
       <h4>
         {{player.prenom}} {{player.nom}}
       </h4>
@@ -20,7 +17,7 @@
         <li><strong>DATE DE NAISSANCE:</strong> <span>{{player.ddn}}</span></li>
       </ul>
     </div>
-    <a class="btn" routerLink="single-player/{{player.id}}">View Player <i aria-hidden="true"
+    <a class="btn" routerLink="{{player._id}}">View Player <i aria-hidden="true"
                                                             class="fa fa-angle-right"></i></a>
   </div>
 

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import benj from 'src/assets/data/comp_j/progTechBenjamins.json';
-import minime from 'src/assets/data/comp_j/progTechMinime.json';
+import {DomSanitizer} from '@angular/platform-browser';
+import {HttpClient} from '@angular/common/http';
+import {DocumentModel} from '../../_service/shared_files/document.model';
 
 @Component({
     selector: 'app-benjamin-minime',
@@ -9,15 +10,17 @@ import minime from 'src/assets/data/comp_j/progTechMinime.json';
 })
 export class BenjaminMinimeComponent implements OnInit {
 
-    progCols = ['Garçons', 'Filles'];
-    benjamins: { Garçons: string, Filles: string } [] = benj;
-    minimes: { Garçons: string, Filles: string } [] = minime;
-
-
-    constructor() {
+    benjpath;
+    benjs: DocumentModel [];
+    constructor(public sanitizer: DomSanitizer, private http: HttpClient) {
     }
 
     ngOnInit() {
+        this.http.get('http://localhost:3000/api/benjamin')
+            .subscribe( ben => {
+                this.benjs = ben as DocumentModel [];
+                this.benjpath = 'http://localhost:3000/uploads/' + this.benjs[0].name;
+            });
     }
 
 }

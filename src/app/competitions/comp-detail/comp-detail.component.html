@@ -5,12 +5,8 @@
         </div>
         <div class="info-team" style="height: 200px">
             <h4> {{competition.name}} </h4>
-            <span class="group-team">
-                            organisateur :
-                {{competition.organisateur}}
-                                    </span>
         </div>
-        <a *ngIf="competition.link" routerLink="{{competition.link}}" class="btn"> voir plus <i class="fa fa-angle-right"
+        <a routerLink="{{competition._id}}" class="btn"> voir plus <i class="fa fa-angle-right"
                                                                                   aria-hidden="true"></i></a>
     </div>
 </div>

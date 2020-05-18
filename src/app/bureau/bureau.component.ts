@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Worker} from '../_service/shared_files/worker.model';
-import {BureauService} from "../_service/bureau.service";
-import {HttpClient} from "@angular/common/http";
+import {BureauService} from '../_service/bureau.service';
+import {HttpClient} from '@angular/common/http';
 
 
 @Component({

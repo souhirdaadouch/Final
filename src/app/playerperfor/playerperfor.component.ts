@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {PerformanceModel} from '../shared/shared_files/performance.model';
 
 @Component({
   selector: 'app-playerperfor',
@@ -6,7 +7,8 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./playerperfor.component.scss']
 })
 export class PlayerperforComponent implements OnInit {
-  @Input() p: Object;
+  @Input() p: PerformanceModel;
+  page = 1;
   constructor() { }
 
   ngOnInit() {

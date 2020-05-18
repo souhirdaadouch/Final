@@ -2,37 +2,31 @@ import {Component, Input, OnInit} from '@angular/core';
 import {CalendrierService} from '../../_Service/calendrier.service';
 import {ActivatedRoute} from '@angular/router';
 import {CalendrierModel} from '../../shared/shared_files/calendrier.model';
-import {NgxPaginationModule} from 'ngx-pagination';
+import {CalenderModel} from '../../shared/shared_files/calender.model';
+
 @Component({
-  selector: 'app-cal-det',
-  templateUrl: './cal-det.component.html',
-  styleUrls: ['./cal-det.component.scss']
+    selector: 'app-cal-det',
+    templateUrl: './cal-det.component.html',
+    styleUrls: ['./cal-det.component.scss']
 })
 export class CalDetComponent implements OnInit {
 
-  p;
-  dataSource;
-  eventId;
-  calendrier: CalendrierModel [];
-  @Input() event: CalendrierModel;
-  cols = ['manifestation', 'date', 'lieu', 'organisateur', 'niveau', 'categorie', 'type'];
+    p;
+    eventId;
+    calendrier: CalenderModel [];
+    @Input() event: CalendrierModel;
 
-  constructor(private calendrierServ: CalendrierService, private route: ActivatedRoute) {
-  }
+    constructor(private calendrierServ: CalendrierService, private route: ActivatedRoute) {
+    }
 
-  ngOnInit() {
-    /*this.route.params
-        .subscribe((data) => {
-            console.log(data);
-            this.eventId = parseInt(data.id, 10);
-            if (this.eventId) {
-                this.event = this.calendrierServ.getCalendrierEventById(this.eventId);
-            }
+    ngOnInit() {
 
-        });*/
-    this.calendrier = this.calendrierServ.getAllCalendrierEvents();
-    this.p = 1;
-    this.dataSource = this.calendrier;
-  }
+        this.calendrierServ.getAllCalendrierEvents()
+            .subscribe(events => {
+                this.calendrier = events as CalenderModel [];
+                this.calendrier.sort( (a, b) => <any>new Date(a.date_debut) - <any>new Date(b.date_debut) )
+                this.p = 1;
+            });
+    }
 
 }

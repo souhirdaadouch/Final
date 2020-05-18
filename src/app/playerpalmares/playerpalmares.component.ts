@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Player} from 'src/app/shared/player.model';
+import {PalmaresModel} from '../shared/shared_files/palmares.model';
 
 @Component({
   selector: 'app-playerpalmares',
@@ -7,7 +8,8 @@ import {Player} from 'src/app/shared/player.model';
   styleUrls: ['./playerpalmares.component.scss']
 })
 export class PlayerpalmaresComponent implements OnInit {
-  @Input() p: Object;
+  @Input() p: PalmaresModel;
+  page = 1;
   constructor() { }
 
   ngOnInit() {

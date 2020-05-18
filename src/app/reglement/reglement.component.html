@@ -1,4 +1,4 @@
-<div class="section-title" style="background:url(../../../assets/img/slide/1.jpg)">
+<div class="section-title" style="background:url(../../assets/img/slide/1.jpg)">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -17,19 +17,19 @@
   </div>
 </div>
 <section class="content-info center">
-  <div class="container row center">
-    <div class="col-md-6">
+  <div class="container row center text-center">
+    <div class="col-md-6" *ngIf="reglement1[0]">
       <br>
       <h2>REGLEMENTS GENERAUX DES COMPETITIONS</h2>
       <br>
-      <embed src="assets/Files/reglement-general.pdf" type="application/pdf" width="100%" height="600px"/>
-    </div>
-    <div class="col-md-6">
+      <embed class="" [src]="sanitizer.bypassSecurityTrustResourceUrl(path1)" type="application/pdf" width="100%"
+             height="800px"/>    </div>
+    <div class="col-md-6" *ngIf="reglement2[0]">
       <br>
       <h2>REGLEMENTS DES COMPETITIONS ORGANISEES PAR LES CLUBS</h2>
       <br>
-      <embed src="assets/Files/reglement-club.pdf" type="application/pdf" width="100%" height="600px"/>
-    </div>
+      <embed class="" [src]="sanitizer.bypassSecurityTrustResourceUrl(path2)" type="application/pdf" width="100%"
+             height="800px"/>    </div>
   </div>
 </section>
 <br>

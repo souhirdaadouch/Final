@@ -11,7 +11,6 @@ export class  Formation20Service {
   }
 
   public getJSON() {
-    return json;
-
+    return this.http.get('http://localhost:3000/api/formation');
   }
 }

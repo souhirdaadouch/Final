@@ -1,9 +1,8 @@
-<div class="col-lg-12 match">
-  <h3 class="clear-title">{{p.Type}}</h3>
-</div>
+
 <table class="table-striped table-responsive table-hover career">
   <thead>
   <tr>
+    <th>type</th>
     <th>Année</th>
     <th>Performance</th>
     <th>Place</th>
@@ -11,17 +10,25 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let perfo of p.Performance" >
+  <tr *ngFor="let perfo of p | paginate: { itemsPerPage: 8, currentPage: page }" >
     <td>
-      {{perfo.Annee}}
+      {{perfo.type}}
     </td>
     <td>
-      {{perfo.PERFORMANCE}}
+      {{perfo.annee}}
     </td>
-    <td>{{perfo.PLACE}}</td>
     <td>
-      {{perfo.DATE}}
+      {{perfo.perf}}
+    </td>
+    <td>{{perfo.place}}</td>
+    <td>
+      {{perfo.date}}
     </td>
   </tr>
   </tbody>
 </table>
+<br>
+<br>
+<br>
+<pagination-controls (pageChange)=" page = $event" class="text-center"></pagination-controls>
+

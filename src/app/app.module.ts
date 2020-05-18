@@ -17,7 +17,6 @@ import {HomeComponent} from './home/home.component';
 import {ContactUsComponent} from './contact-us/contact-us.component';
 import {SitemapComponent} from './sitemap/sitemap.component';
 import {NewsComponent} from './news/news.component';
-import {FormationsComponent} from './formations/formations.component';
 import {EngagementLicenseComponent} from './engagement-license/engagement-license.component';
 import {StaticsComponent} from './statics/statics.component';
 import {TopplayerComponent} from './topplayer/topplayer.component';
@@ -27,9 +26,7 @@ import {ProjetComponent} from './athlesante/projet/projet.component';
 import {ProgrammeComponent} from './athlesante/programme/programme.component';
 import {EngagementComponent} from './athlesante/engagement/engagement.component';
 import {AgmCoreModule} from '@agm/core';
-import {FormulaireComponent} from './formations/formulaire/formulaire.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CommuniqueeComponent} from './formations/communiquee/communiquee.component';
 import {ListeParticipantComponent} from './formations/liste-participant/liste-participant.component';
 import {PlayerService} from './_service/serv_player';
 import {RecordFemService} from './_service/recFem';
@@ -76,30 +73,12 @@ import {GallerieComponent} from './galerie/gallerie.component';
 import {GalerieDetailComponent} from './galerie/galerie-detail/galerie-detail.component';
 import {CoursemasterComponent} from './coursemaster/coursemaster.component';
 import {CalendriermasterComponent} from './calendriermaster/calendriermaster.component';
-import {PisteComponent} from './competitions/piste/piste.component';
 import {TableRowComponent} from './competitions/table-row/table-row.component';
 import {MinimasAthleteCibleComponent} from './competitions/minimas-athlete-cible/minimas-athlete-cible.component';
-import {MasterComponent} from './competitions/master/master.component';
-import {MarcheComponent} from './competitions/marche/marche.component';
 import {ListCompComponent} from './competitions/list-comp/list-comp.component';
-import {QualificationDetailsComponent} from './competitions/cross-country/qualification-details/qualification-details.component';
-import {DistanceDetailsComponent} from './competitions/cross-country/distance-details/distance-details.component';
-import {CrossComponent} from './competitions/cross-country/cross/cross.component';
-import {CriteriumHiverComponent} from './competitions/criterium-hiver/criterium-hiver.component';
-import {ReglementParticipationComponent} from './competitions/criterium-hiver/reglement-participation/reglement-participation.component';
 import {CompDetailComponent} from './competitions/comp-detail/comp-detail.component';
-import {ChampionnatSurPisteComponent} from './competitions/championnat-sur-piste/championnat-sur-piste.component';
-import {ReglementSurPisteComponent} from './competitions/championnat-sur-piste/reglement-sur-piste/reglement-sur-piste.component';
-import {ChampionnatMarcheRouteComponent} from './competitions/championnat-marche-route/championnat-marche-route.component';
-import {ParticipationComponent} from './competitions/championnat-marche-route/participation/participation.component';
-import {ChampionnatEprCombComponent} from './competitions/championnat-epr-comb/championnat-epr-comb.component';
-import {PartEpCombComponent} from './competitions/championnat-epr-comb/part-ep-comb/part-ep-comb.component';
-import {NotesChampEpCombComponent} from './competitions/championnat-epr-comb/notes-champ-ep-comb/notes-champ-ep-comb.component';
-import {ChampionnatCrossCountryComponent} from './competitions/championnat-cross-country/championnat-cross-country.component';
 import {CategoriesComponent} from './competitions/categories/categories.component';
 import {BenjaminMinimeComponent} from './competitions/benjamin-minime/benjamin-minime.component';
-import {PartPisteBenjaminComponent} from './competitions/benjamin-minime/part-piste-benjamin/part-piste-benjamin.component';
-import {CaractHaiesComponent} from './competitions/benjamin-minime/caract-haies/caract-haies.component';
 import {CalDetComponent} from './calendrier-competition/cal-det/cal-det.component';
 import {ListCalComponent} from './calendrier-competition/list-cal/list-cal.component';
 import {CompMasterComponent} from './comp-master/comp-master.component';
@@ -167,6 +146,11 @@ import { FinalccSenMComponent } from './results/final-cc/finalcc-sen-m/finalcc-s
 import { FinalccSenFComponent } from './results/final-cc/finalcc-sen-f/finalcc-sen-f.component';
 import { FinalccMinFComponent } from './results/final-cc/finalcc-min-f/finalcc-min-f.component';
 import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-min-m.component';
+import { CompetitionDetailComponent } from './competitions/competition-detail/competition-detail.component';
+import { DemandeSessionComponent } from './form/demande-session/demande-session.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from './_interceptor/token.interceptor';
+import { FormationDetailComponent } from './formations/formation-detail/formation-detail.component';
 
 @NgModule({
   declarations: [
@@ -210,15 +194,12 @@ import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-m
     SitemapComponent,
     NewsComponent,
     PresentationComponent,
-    FormationsComponent,
     EngagementLicenseComponent,
     StaticsComponent,
     TopplayerComponent,
     AthlesanteComponent,
     ProjetComponent,
     ProgrammeComponent,
-    FormulaireComponent,
-    CommuniqueeComponent,
     ListeParticipantComponent,
     SharedComponent,
     RecordComponent,
@@ -237,30 +218,12 @@ import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-m
     GalerieDetailComponent,
     CoursemasterComponent,
     CalendriermasterComponent,
-    PisteComponent,
     TableRowComponent,
     MinimasAthleteCibleComponent,
-    MasterComponent,
-    MarcheComponent,
     ListCompComponent,
-    QualificationDetailsComponent,
-    DistanceDetailsComponent,
-    CrossComponent,
-    CriteriumHiverComponent,
-    ReglementParticipationComponent,
     CompDetailComponent,
-    ChampionnatSurPisteComponent,
-    ReglementSurPisteComponent,
-    ChampionnatMarcheRouteComponent,
-    ParticipationComponent,
-    ChampionnatEprCombComponent,
-    PartEpCombComponent,
-    NotesChampEpCombComponent,
-    ChampionnatCrossCountryComponent,
     CategoriesComponent,
     BenjaminMinimeComponent,
-    PartPisteBenjaminComponent,
-    CaractHaiesComponent,
     CalDetComponent,
     ListCalComponent,
     CompMasterComponent,
@@ -317,7 +280,10 @@ import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-m
     FinalccSenMComponent,
     FinalccSenFComponent,
     FinalccMinFComponent,
-    FinalccMinMComponent
+    FinalccMinMComponent,
+    CompetitionDetailComponent,
+    DemandeSessionComponent,
+    FormationDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -345,6 +311,11 @@ import { FinalccMinMComponent } from './results/final-cc/finalcc-min-m/finalcc-m
     ChampMSRHammametService,
     FinalCCGafsaService,
     ChAfrMasters2019Service,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    },
     EventService,
     {
       provide: LocationStrategy,

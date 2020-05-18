@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import {RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {TeamsComponent} from './teams/teams.component';
 import {PlayersComponent} from './players/players.component';
@@ -12,12 +12,8 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {NewsComponent} from './news/news.component';
 import {SingleNewsComponent} from './single-news/single-news.component';
 import {TopplayerComponent} from './topplayer/topplayer.component';
-import {FormationsComponent} from './formations/formations.component';
 import {AthlesanteComponent} from './athlesante/athlesante.component';
-import {ProjetComponent} from './athlesante/projet/projet.component';
 import {ProgrammeComponent} from './athlesante/programme/programme.component';
-import {FormulaireComponent} from './formations/formulaire/formulaire.component';
-import {CommuniqueeComponent} from './formations/communiquee/communiquee.component';
 import {ListeParticipantComponent} from './formations/liste-participant/liste-participant.component';
 import {RecordComponent} from './home/record/record.component';
 import {RecordinComponent} from './home/record/recordin/recordin.component';
@@ -43,18 +39,9 @@ import {GalerieDetailComponent} from './galerie/galerie-detail/galerie-detail.co
 import {ListCompComponent} from './competitions/list-comp/list-comp.component';
 import {CategoriesComponent} from './competitions/categories/categories.component';
 import {ListCalComponent} from './calendrier-competition/list-cal/list-cal.component';
-import {ChampionnatMarcheRouteComponent} from './competitions/championnat-marche-route/championnat-marche-route.component';
-import {ChampionnatSurPisteComponent} from './competitions/championnat-sur-piste/championnat-sur-piste.component';
-import {CriteriumHiverComponent} from './competitions/criterium-hiver/criterium-hiver.component';
-import {ChampionnatEprCombComponent} from './competitions/championnat-epr-comb/championnat-epr-comb.component';
-import {ChampionnatCrossCountryComponent} from './competitions/championnat-cross-country/championnat-cross-country.component';
-import {PisteComponent} from './competitions/piste/piste.component';
-import {MarcheComponent} from './competitions/marche/marche.component';
 import {MinimasAthleteCibleComponent} from './competitions/minimas-athlete-cible/minimas-athlete-cible.component';
 import {BenjaminMinimeComponent} from './competitions/benjamin-minime/benjamin-minime.component';
-import {CrossComponent} from './competitions/cross-country/cross/cross.component';
 import {CompMasterComponent} from './comp-master/comp-master.component';
-import {MasterComponent} from './competitions/master/master.component';
 import {ChampTunMSRradesComponent} from './results/champ-tun-msrrades/champ-tun-msrrades.component';
 import {QuadriathlonComponent} from './results/quadriathlon/quadriathlon.component';
 import {Champ10000mComponent} from './results/champ10000m/champ10000m.component';
@@ -107,466 +94,433 @@ import {FinalccMinFComponent} from './results/final-cc/finalcc-min-f/finalcc-min
 import {FinalccMinMComponent} from './results/final-cc/finalcc-min-m/finalcc-min-m.component';
 import {FinalccSenMComponent} from './results/final-cc/finalcc-sen-m/finalcc-sen-m.component';
 import {FinalccSenFComponent} from './results/final-cc/finalcc-sen-f/finalcc-sen-f.component';
+import {CompetitionDetailComponent} from './competitions/competition-detail/competition-detail.component';
+import {DemandeSessionComponent} from './form/demande-session/demande-session.component';
+import {EngagementComponent} from './athlesante/engagement/engagement.component';
+import {FormationDetailComponent} from './formations/formation-detail/formation-detail.component';
 
 function MCompMasterComponent() {
 }
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
-  {
-    path: 'home',
-    component: HomeComponent,
-  },
-  {
-    path: 'presentation',
-    component: PresentationComponent,
-  },
-  {
-    path: 'engagement-licence',
-    component: EngagementLicenseComponent,
-  },
-  {
-    path: 'communiquee_for',
-    component: CommuniqueeComponent,
-  },
-  {
-    path: 'recordH',
-    component: RecordHComponent,
-  },
-  {
-    path: 'commissions',
-    component: CommissionFederaleComponent,
-  },
-  {
-    path: 'Formulaire_inscri',
-    component: FormulaireComponent,
-  },
-  {
-    path: 'player-list',
-    component: PlayersComponent,
-  },
-  {
-    path: 'reglements',
-    component: ReglementsComponent,
-  },
+    {
+        path: '',
+        component: HomeComponent,
+    },
+    {
+        path: 'home',
+        component: HomeComponent,
+    },
+    {
+        path: 'presentation',
+        component: PresentationComponent,
+    },
+    {
+        path: 'engagement-licence',
+        component: EngagementLicenseComponent,
+    },
+    {
+        path: 'recordH',
+        component: RecordHComponent,
+    },
+    {
+        path: 'commissions',
+        component: CommissionFederaleComponent,
+    },
+    {
+        path: 'player-list',
+        component: PlayersComponent,
+    },
+    {
+        path: 'reglements',
+        component: ReglementsComponent,
+    },
 
-  {
-    path: 'reglement',
-    component: ReglementComponent,
-  },
-  {
-    path: 'masters',
-    component: CompMasterComponent,
-  },
-  {
-    path: 'affiliated-clubs',
-    component: AffiliatedClubsComponent
-  },
-  {
-    path: 'nos-documents',
-    component: NosDocumentsComponent,
-  },
-  {
-    path: 'demandeaffiliation',
-    component: DemandeAffiliationComponent,
-  },
-  {
-    path: 'licence-master',
-    component: FormDemandeLicenceMasterComponent,
-  },
-  {
-    path: 'licence-runner',
-    component: FormDemandeLicenceRunnerComponent,
-  },
-  {
-    path: 'licence-athlete',
-    component: FormDemandeLicenceAthleteComponent,
-  },
-  {
-    path: 'licence-athlete-promotion',
-    component: FormDemandeLicenceAthletePromotionComponent,
-  },
-  {
-    path: 'licence-dirigeant',
-    component: FormDemandeLicenceDirigeantComponent,
-  },
-  {
-    path: 'licence-entraineur',
-    component: FormDemandeLicenceEntraineurComponent,
-  },
-  {
-    path: 'demande-juge',
-    component: FormDemandeJugeComponent,
-  },
-  {
-    path: 'demande-mutation',
-    component: DemandeMutationComponent,
-  },
-  {
-    path: 'bureau',
-    component: BureauComponent,
-  },
-  {
-    path: 'ligues',
-    component: LiguesComponent,
-  },
-  {
-    path: 'clubs',
-    component: ClubsComponent,
-  },
-  {
-    path: 'listeAthletes',
-    component: PlayersComponent,
-  },
-  {
-    path: 'liste_participant',
-    component: ListeParticipantComponent,
-  },
-  {
-    path: 'Programme',
-    component: ProgrammeComponent,
-  },
-  {
-    path: 'records_In',
-    component: RecordinComponent,
-  },
-  {
-    path: 'records',
-    component: RecordComponent,
-  },
-  {
-    path: 'msrJuniors',
-    component: MsrJuniorsComponent,
-  },
-  {
-    path: 'msrJuniorsF',
-    component: MsrJuniorsFComponent,
-  },
-  {
-    path: 'msrJuniorsM',
-    component: MsrJuniorsMComponent,
-  },
-  {
-    path: 'msrSeniorsM',
-    component: MsrSeniorsMComponent,
-  },
-  {
-    path: 'msrSeniorsF',
-    component: MsrSeniorsFComponent,
-  },
-  {
-    path: 'champ10SeniorsF',
-    component: Champ10SeniorsFComponent,
-  },
-  {
-    path: 'champ10SeniorsM',
-    component: Champ10SeniorsMComponent,
-  },
-  {
-    path: 'champ10JuniorsF',
-    component: Champ10JuniorsFComponent,
-  },
-  {
-    path: 'champ10JuniorsM',
-    component: Champ10JuniorsMComponent,
-  },
-  {
-    path: 'quadriMinimeF',
-    component: QuadriMinFComponent,
-  },
-  {
-    path: 'quadriMinimeM',
-    component: QuadriMinMComponent,
-  },
-  {
-    path: 'hepthCadet',
-    component: DecCadetComponent,
-  },
-  {
-    path: 'hepthJuniors',
-    component: DecJuniorsComponent,
-  },
-  {
-    path: 'hepthSeniors',
-    component: DecSeniorsComponent,
-  },
-  {
-    path: 'msrhMinimeM',
-    component: MsrhMinMComponent,
-  },
-  {
-    path: 'msrhMinimeF',
-    component: MsrhMinFComponent,
-  },
-  {
-    path: 'msrhJuniorsF',
-    component: MsrhJunFComponent,
-  },
-  {
-    path: 'msrhJuniorsM',
-    component: MsrhJunMComponent,
-  },
-  {
-    path: 'msrhSeniorsM',
-    component: MsrhSenMComponent,
-  },
-  {
-    path: 'msrhSeniorsF',
-    component: MsrhSenFComponent,
-  },
-  {
-    path: 'msrhCadetM',
-    component: MsrhCdtMComponent,
-  },
-  {
-    path: 'msrhCadetF',
-    component: MsrhCdtFComponent,
-  },
-  {
-    path: 'fccMinimeM',
-    component: FinalccMinMComponent,
-  },
-  {
-    path: 'fccMinimeF',
-    component: FinalccMinFComponent,
-  },
-  {
-    path: 'fccJuniorsF',
-    component: FinalccJunFComponent,
-  },
-  {
-    path: 'fccJuniorsM',
-    component: FinalccJunMComponent,
-  },
-  {
-    path: 'fccSeniorsM',
-    component: FinalccSenMComponent,
-  },
-  {
-    path: 'fccSeniorsF',
-    component: FinalccSenFComponent,
-  },
-  {
-    path: 'fccCadetM',
-    component: FinalccCdtMComponent,
-  },
-  {
-    path: 'fccCadetF',
-    component: FinalccCdtFComponent,
-  },
-  {
-    path: 'Formation',
-    component: FormationsComponent,
-  },
-  {
-    path: 'records_Dame',
-    component: RecordfemComponent,
-  },
-  {
-    path: 'championnat',
-    component: ChampionnatComponent,
-  },
-  {
-    path: 'athlesante',
-    component: AthlesanteComponent,
-  },
-
-  {
-    path: 'team-list',
-    component: TeamsComponent,
-  },
-  {
-    path: 'player-list',
-    component: PlayersComponent,
-  },
-  {
-    path: 'single-player',
-    component: SinglePlayerComponent,
-  },
-  {
-    path: 'formation_20',
-    component: Formation20Component,
-  },
-  {
-    path: 'results',
-    component: ResultsComponent,
-  },
-  {
-    path: 'point-table',
-    component: TablePointComponent,
-  },
-  {
-    path: 'groups',
-    component: GroupsComponent,
-  },
-  {
-    path: 'contact-us',
-    component: ContactUsComponent,
-  },
-  {
-    path: 'champ_arabe20',
-    component: Champarabe20Component,
-  },
-  {
-    path: 'news',
-    component: NewsComponent,
-  },
-  {
-    path: 'single-news',
-    component: SingleNewsComponent,
-  },
-  {
-    path: 'TopPlayers',
-    component: TopplayerComponent,
-  },
-  {
-    path: 'centre_de_formation',
-    component: CentreDeFormationComponent,
-  },
-  {
-    path: 'evenement',
-    component: EvenementComponent,
-  },
-  {
-    path: 'galerie',
-    component: GallerieComponent,
-  },
-  {
-    path: 'competition',
-    component: ListCompComponent,
-  },
-  {
-    path: 'competition/categories',
-    component: CategoriesComponent,
-  },
-  {
-    path: 'calendrier',
-    component: ListCalComponent,
-  },
-  {
-    path: 'competition/cross',
-    component: CrossComponent,
-  },
-  {
-    path: 'competition/benjamins',
-    component: BenjaminMinimeComponent,
-  },
-  {
-    path: 'competition/master',
-    component: MasterComponent,
-  },
-  {
-    path: 'competition/minimas',
-    component: MinimasAthleteCibleComponent,
-  },
-  {
-    path: 'competition/marche',
-    component: MarcheComponent,
-  },
-  {
-    path: 'competition/piste',
-    component: PisteComponent,
-  },
-  {
-    path: 'competition/championnatCross',
-    component: ChampionnatCrossCountryComponent,
-  },
-  {
-    path: 'competition/champEpreuveCombine',
-    component: ChampionnatEprCombComponent,
-  },
-  {
-    path: 'competition/criteriumHiver',
-    component: CriteriumHiverComponent,
-  },
-  {
-    path: 'competition/championnatPiste',
-    component: ChampionnatSurPisteComponent,
-  },
-  {
-    path: 'competition/championnatMarche',
-    component: ChampionnatMarcheRouteComponent,
-  },
-  {
-    path: 'galerie-detail/:id',
-    component: GalerieDetailComponent,
-  },
-  {
-    path: 'evenement-detail/:id',
-    component: EvenementDetailComponent,
-  },
-  {
-    path: 'single-player/:id',
-    component: SinglePlayerComponent,
-  },
-  {
-    path: 'player-list/:num',
-    component: PlayersComponent,
-  },
-  {
-    path: 'single-ligue/:id',
-    component: SingleLigueComponent
-  },
-  {
-    path: 'single-club/:id',
-    component: SingleClubComponent,
-  },
-  {
-    path: 'ChampTunMSRRades',
-    component: ChampTunMSRradesComponent,
-  },
-  {
-    path: 'ChampQuad',
-    component: QuadriathlonComponent,
-  },
-  {
-    path: 'Champ10000m',
-    component: Champ10000mComponent,
-  },
-  {
-    path: 'ChampHept',
-    component: HeptathlonComponent,
-  },
-  {
-    path: 'ChampDec',
-    component: DecathlonComponent,
-  },
-  {
-    path: 'ChampPiste',
-    component: ChampPisteComponent,
-  },
-  {
-    path: 'ChampTunMSRHam',
-    component: ChampMSRHComponent,
-  },
-  {
-    path: 'ChampAfrMaster',
-    component: ChampAfr2019Component,
-  },
-  {
-    path: 'ChampArC',
-    component: ChampArCComponent,
-  },
-  {
-    path: 'ChampCC',
-    component: FinalCCComponent,
-  },
-  {
-    path: 'not-found',
-    component: NotFoundComponent,
-  },
-  {
-    path: '**',
-    redirectTo: 'not-found',
-  }
+    {
+        path: 'reglement',
+        component: ReglementComponent,
+    },
+    {
+        path: 'masters',
+        component: CompMasterComponent,
+    },
+    {
+        path: 'affiliated-clubs',
+        component: AffiliatedClubsComponent
+    },
+    {
+        path: 'nos-documents',
+        component: NosDocumentsComponent,
+    },
+    {
+        path: 'demandesession',
+        component: DemandeSessionComponent,
+    },
+    {
+        path: 'demandeaffiliation',
+        component: DemandeAffiliationComponent,
+    },
+    {
+        path: 'licence-master',
+        component: FormDemandeLicenceMasterComponent,
+    },
+    {
+        path: 'licence-runner',
+        component: FormDemandeLicenceRunnerComponent,
+    },
+    {
+        path: 'licence-athlete',
+        component: FormDemandeLicenceAthleteComponent,
+    },
+    {
+        path: 'licence-athlete-promotion',
+        component: FormDemandeLicenceAthletePromotionComponent,
+    },
+    {
+        path: 'licence-dirigeant',
+        component: FormDemandeLicenceDirigeantComponent,
+    },
+    {
+        path: 'licence-entraineur',
+        component: FormDemandeLicenceEntraineurComponent,
+    },
+    {
+        path: 'demande-juge',
+        component: FormDemandeJugeComponent,
+    },
+    {
+        path: 'demande-mutation',
+        component: DemandeMutationComponent,
+    },
+    {
+        path: 'bureau',
+        component: BureauComponent,
+    },
+    {
+        path: 'ligues',
+        component: LiguesComponent,
+    },
+    {
+        path: 'clubs',
+        component: ClubsComponent,
+    },
+    {
+        path: 'listeAthletes',
+        component: PlayersComponent,
+    },
+    {
+        path: 'liste_participant',
+        component: ListeParticipantComponent,
+    },
+    {
+        path: 'Programme',
+        component: ProgrammeComponent,
+    },
+    {
+        path: 'records_In',
+        component: RecordinComponent,
+    },
+    {
+        path: 'records',
+        component: RecordComponent,
+    },
+    {
+        path: 'msrJuniors',
+        component: MsrJuniorsComponent,
+    },
+    {
+        path: 'msrJuniorsF',
+        component: MsrJuniorsFComponent,
+    },
+    {
+        path: 'msrJuniorsM',
+        component: MsrJuniorsMComponent,
+    },
+    {
+        path: 'msrSeniorsM',
+        component: MsrSeniorsMComponent,
+    },
+    {
+        path: 'msrSeniorsF',
+        component: MsrSeniorsFComponent,
+    },
+    {
+        path: 'champ10SeniorsF',
+        component: Champ10SeniorsFComponent,
+    },
+    {
+        path: 'champ10SeniorsM',
+        component: Champ10SeniorsMComponent,
+    },
+    {
+        path: 'champ10JuniorsF',
+        component: Champ10JuniorsFComponent,
+    },
+    {
+        path: 'champ10JuniorsM',
+        component: Champ10JuniorsMComponent,
+    },
+    {
+        path: 'quadriMinimeF',
+        component: QuadriMinFComponent,
+    },
+    {
+        path: 'quadriMinimeM',
+        component: QuadriMinMComponent,
+    },
+    {
+        path: 'hepthCadet',
+        component: DecCadetComponent,
+    },
+    {
+        path: 'hepthJuniors',
+        component: DecJuniorsComponent,
+    },
+    {
+        path: 'hepthSeniors',
+        component: DecSeniorsComponent,
+    },
+    {
+        path: 'msrhMinimeM',
+        component: MsrhMinMComponent,
+    },
+    {
+        path: 'msrhMinimeF',
+        component: MsrhMinFComponent,
+    },
+    {
+        path: 'msrhJuniorsF',
+        component: MsrhJunFComponent,
+    },
+    {
+        path: 'msrhJuniorsM',
+        component: MsrhJunMComponent,
+    },
+    {
+        path: 'msrhSeniorsM',
+        component: MsrhSenMComponent,
+    },
+    {
+        path: 'msrhSeniorsF',
+        component: MsrhSenFComponent,
+    },
+    {
+        path: 'msrhCadetM',
+        component: MsrhCdtMComponent,
+    },
+    {
+        path: 'msrhCadetF',
+        component: MsrhCdtFComponent,
+    },
+    {
+        path: 'fccMinimeM',
+        component: FinalccMinMComponent,
+    },
+    {
+        path: 'fccMinimeF',
+        component: FinalccMinFComponent,
+    },
+    {
+        path: 'fccJuniorsF',
+        component: FinalccJunFComponent,
+    },
+    {
+        path: 'fccJuniorsM',
+        component: FinalccJunMComponent,
+    },
+    {
+        path: 'fccSeniorsM',
+        component: FinalccSenMComponent,
+    },
+    {
+        path: 'fccSeniorsF',
+        component: FinalccSenFComponent,
+    },
+    {
+        path: 'fccCadetM',
+        component: FinalccCdtMComponent,
+    },
+    {
+        path: 'fccCadetF',
+        component: FinalccCdtFComponent,
+    },
+    {
+        path: 'records_Dame',
+        component: RecordfemComponent,
+    },
+    {
+        path: 'championnat',
+        component: ChampionnatComponent,
+    },
+    {
+        path: 'athlesante',
+        component: AthlesanteComponent,
+    },
+    {
+        path: 'engagement_athlesante',
+        component: EngagementComponent,
+    },
+    {
+        path: 'team-list',
+        component: TeamsComponent,
+    },
+    {
+        path: 'player-list',
+        component: PlayersComponent,
+    },
+    {
+        path: 'formation_20',
+        component: Formation20Component,
+    },
+    {
+        path: 'results',
+        component: ResultsComponent,
+    },
+    {
+        path: 'point-table',
+        component: TablePointComponent,
+    },
+    {
+        path: 'groups',
+        component: GroupsComponent,
+    },
+    {
+        path: 'contact-us',
+        component: ContactUsComponent,
+    },
+    {
+        path: 'champ_arabe20',
+        component: Champarabe20Component,
+    },
+    {
+        path: 'news',
+        component: NewsComponent,
+    },
+    {
+        path: 'single-news',
+        component: SingleNewsComponent,
+    },
+    {
+        path: 'TopPlayers',
+        component: TopplayerComponent,
+    },
+    {
+        path: 'centre_de_formation',
+        component: CentreDeFormationComponent,
+    },
+    {
+        path: 'evenement',
+        component: EvenementComponent,
+    },
+    {
+        path: 'galerie',
+        component: GallerieComponent,
+    },
+    {
+        path: 'competition',
+        component: ListCompComponent,
+    },
+    {
+        path: 'competition/categories',
+        component: CategoriesComponent,
+    },
+    {
+        path: 'calendrier',
+        component: ListCalComponent,
+    },
+    {
+        path: 'benjamin',
+        component: BenjaminMinimeComponent,
+    },
+    {
+        path: 'competition/minimas',
+        component: MinimasAthleteCibleComponent,
+    },
+    {
+        path: 'formation_20/:id',
+        component: FormationDetailComponent,
+    },
+    {
+        path: 'competition/:id',
+        component: CompetitionDetailComponent,
+    },
+    {
+        path: 'galerie-detail/:id',
+        component: GalerieDetailComponent,
+    },
+    {
+        path: 'evenement-detail/:id',
+        component: EvenementDetailComponent,
+    },
+    {
+        path: 'single-player/:id',
+        component: SinglePlayerComponent,
+    },
+    {
+        path: 'player-list/:id',
+        component: SinglePlayerComponent,
+    },
+    {
+        path: 'single-ligue/:id',
+        component: SingleLigueComponent
+    },
+    {
+        path: 'single-club/:id',
+        component: SingleClubComponent,
+    },
+    {
+        path: 'ChampTunMSRRades',
+        component: ChampTunMSRradesComponent,
+    },
+    {
+        path: 'ChampQuad',
+        component: QuadriathlonComponent,
+    },
+    {
+        path: 'Champ10000m',
+        component: Champ10000mComponent,
+    },
+    {
+        path: 'ChampHept',
+        component: HeptathlonComponent,
+    },
+    {
+        path: 'ChampDec',
+        component: DecathlonComponent,
+    },
+    {
+        path: 'ChampPiste',
+        component: ChampPisteComponent,
+    },
+    {
+        path: 'ChampTunMSRHam',
+        component: ChampMSRHComponent,
+    },
+    {
+        path: 'ChampAfrMaster',
+        component: ChampAfr2019Component,
+    },
+    {
+        path: 'ChampArC',
+        component: ChampArCComponent,
+    },
+    {
+        path: 'ChampCC',
+        component: FinalCCComponent,
+    },
+    {
+        path: 'not-found',
+        component: NotFoundComponent,
+    },
+    {
+        path: '**',
+        redirectTo: 'not-found',
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {
 }

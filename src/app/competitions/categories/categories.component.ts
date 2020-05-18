@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import saison from 'src/assets/data/comp_j/season.json';
-import cat from 'src/assets/data/categorie.json';
+import {HttpClient} from '@angular/common/http';
+import {DocumentModel} from '../../_service/shared_files/document.model';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-categories',
@@ -8,19 +9,20 @@ import cat from 'src/assets/data/categorie.json';
     styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-    season: { season: string } [] = saison;
-    cat: {
-        id: number,
-        Organisme: string,
-        Catégorie: string,
-        'Année de naissance': string
-    } [] = cat;
-    catCol = ['Organisme', 'Catégorie', 'Année de naissance'];
+    cats: DocumentModel [];
+    categorie: DocumentModel;
+    catPath
 
-    constructor() {
+    constructor(private http: HttpClient, public sanitizer: DomSanitizer) {
     }
 
     ngOnInit() {
+        this.http.get('http://localhost:3000/api/categorie')
+            .subscribe(cat => {
+                this.cats = cat as DocumentModel [];
+                this.categorie = this.cats[0];
+                this.catPath = 'http://localhost:3000/uploads/' + this.categorie.name;
+            });
     }
 
 }
